@@ -7,7 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody2D body;
-    public float powerJump; 
+    public Animator animator;
+    public float powerJump;
+
+    public float x;
+    public float y;
+    public float z;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +25,20 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector2 currentVelocity = new Vector2(0, body.velocity.y);
+        bool isRunning = false;
             
         if(Input.GetKey(KeyCode.D))
         {
-            currentVelocity += new Vector2(3, 0);
+            currentVelocity += new Vector2(5, 0);
+            isRunning = true;
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            currentVelocity += new Vector2(-3, 0);
+            currentVelocity += new Vector2(-5, 0);
+            isRunning = true;
         }
 
+        animator.SetBool("isRunning", isRunning);
 
         body.velocity = currentVelocity;
 
@@ -41,7 +52,16 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(new Vector2(0, 1) * powerJump);
         }
 
+        x = PlayerPrefs.GetFloat("x");
+        y = body.position.y;
+        z = PlayerPrefs.GetFloat("z");
+        print(y);
 
-
+        if (y <= -13)
+        {
+            Vector3 LoadPosition = new Vector3(-7, -1, 0);
+            transform.position = LoadPosition;
+        }
     }
+
 }
