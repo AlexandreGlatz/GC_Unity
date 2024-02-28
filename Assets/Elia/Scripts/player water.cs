@@ -8,6 +8,9 @@ public class player_water : MonoBehaviour
     public Rigidbody2D body;
     public float speed;
     public float powerjump;
+    private float yMin, yMax;
+    public float gravity;
+
 
 
 
@@ -22,28 +25,39 @@ public class player_water : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 currentVelocity = new Vector2(0, 0);
+        Vector2 currentVelocity = new Vector2(0, body.velocity.y);
+        float Spritesize = GetComponent<SpriteRenderer>().bounds.size.y;
+        float camheight = Camera.main.orthographicSize;
 
-        if (Input.GetKey(KeyCode.D))
+        yMin = -camheight + Spritesize/2;
+        yMax = camheight - Spritesize/2;
+        
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.Q))
         {
             currentVelocity += new Vector2(1*speed,0);
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.D))
         {
             currentVelocity += new Vector2(-1*speed,0);
         }
 
 
-        if (Input.GetKey(KeyCode.Z))
+        body.velocity = currentVelocity;
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z))
         {
-            currentVelocity += new Vector2(0, 1 * speed);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            currentVelocity += new Vector2(0, -1 * speed);
+            body.velocity = new Vector2(currentVelocity.x,0);
+            body.AddForce(new Vector2(0, 1) * powerjump);
         }
 
-        body.velocity = currentVelocity;
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            body.velocity = new Vector2(currentVelocity.x, 0);
+            body.AddForce(new Vector2(0, -1)*gravity);
+        }
+
+        if (body.position.y < yMin) { transform.position = new Vector2(body.position.x,yMin); }
+        if (body.position.y > yMax) { transform.position = new Vector2(body.position.x, yMax); }
     }
 
     void FixedUpdate()
