@@ -21,21 +21,23 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         Vector2 currentVelocity = new Vector2(0, body.velocity.y);
-        if (currentJump < maxJump) {
+        
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            currentVelocity += new Vector2(moveSpeed, 0);
+        }
 
-            if (Input.GetKey(KeyCode.D))
-            {
-                currentVelocity += new Vector2(moveSpeed, 0);
-            }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            currentVelocity += new Vector2(-moveSpeed, 0);
+        }
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                currentVelocity += new Vector2(-moveSpeed, 0);
-            }
+        body.velocity = currentVelocity;
 
-            body.velocity = currentVelocity;
+        if (currentJump < maxJump)
+        {
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 body.AddForce(new Vector2(0, 1) * powerJump);
                 currentJump++;
