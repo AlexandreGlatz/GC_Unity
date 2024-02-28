@@ -17,12 +17,12 @@ public class light_effec : MonoBehaviour
         halflength = (cam.orthographicSize * cam.aspect);
         length = halflength * 6;
         startpos = halflength;
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
 
         float temp = (follow.transform.position.x * (1 - parallaxEffect));
         float distance = (follow.transform.position.x * parallaxEffect);
