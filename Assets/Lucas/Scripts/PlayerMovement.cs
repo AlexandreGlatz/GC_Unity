@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float z;
     public SpriteRenderer spriteRenderer;
 
+    public AudioSource dedge;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             body.AddForce(new Vector2(0, 1) * powerJump);
+            dedge.PlayOneShot(clip);
         }
 
         x = PlayerPrefs.GetFloat("x");
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 LoadPosition = new Vector3(-7, -1, 0);
             transform.position = LoadPosition;
+            dedge.PlayOneShot(clip);
         }
 
         
