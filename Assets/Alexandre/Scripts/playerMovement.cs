@@ -5,54 +5,7 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
-    private DefaultPlayerActions _DefaultPlayerAtions;
-
-    private InputAction _moveAction;
-    private InputAction _lookAction;
-    
-    private void Awake()
-    {
-        _DefaultPlayerAtions = new DefaultPlayerActions();
-    }
-
-    private void OnEnable()
-    {
-        _moveAction = _DefaultPlayerAtions.Player.Move; 
-        _moveAction.Enable();
-        _lookAction = _DefaultPlayerAtions.Player.Look;
-        _lookAction.Enable();
-        _DefaultPlayerAtions.Player.Jump.Enable();
-    }
-
-    private void OnDisable()
-    {
-        _moveAction.Disable();
-        _lookAction.Disable();
-        _DefaultPlayerAtions.Player.Jump.Disable();
-    }
-
-    private void FixedUpdate()
-    {
-        Vector2 moveDir = _moveAction.ReadValue<Vector2>();
-
-        Vector2 lookDir = _moveAction.ReadValue<Vector2>();
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         
@@ -108,6 +61,6 @@ public class playerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
 
-    }*/
+    }
 
 }
