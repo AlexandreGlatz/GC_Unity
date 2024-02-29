@@ -17,18 +17,38 @@ public class Life : MonoBehaviour
     }
 
     public int pv;
+    bool isInvincible;
+
     public void TakeDamage(int damage)
     {
-        pv -= damage;
-
-        if (pv < 0)
+        if (isInvincible)
         {
-            Death();
+            pv -= damage;
+
+            if (pv < 0)
+            {
+                Death();
+            }
+
+            StartCoroutine(Invincibility());
+        }
+        else
+        {
+            print("jsuis invincible");
         }
     }
 
     public void Death()
     {
         Destroy(gameObject);
+    }
+
+    public IEnumerator Invincibility()
+    {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(2);
+
+        isInvincible = false;
     }
 }

@@ -25,4 +25,6 @@ public class DamageBoar : MonoBehaviour
             collision.gameObject.GetComponent<Life>().TakeDamage(damage);
         }
     }
+
+    
 }
