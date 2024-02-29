@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - boar
   - wall
+  - player
   layers:
   - Default
   - TransparentFX
