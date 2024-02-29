@@ -35,6 +35,5 @@ public class balance : MonoBehaviour
         x = body.position.x;
         y = body.position.y;
 
-        if (x < 25 )
     }
 }
