@@ -5,31 +5,42 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
-    //Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public Rigidbody2D body;
+    public Animator animator;
+    private SpriteRenderer spriteRenderer;
+
+
     public float powerJump;
     public float moveSpeed;
     int maxJump = 3;
     int currentJump = 0;
 
+    //Start is called before the first frame update
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         Vector2 currentVelocity = new Vector2(0, body.velocity.y);
-        
+        animator.ResetTrigger("isWalking");
+        animator.ResetTrigger("isFalling");
+        animator.ResetTrigger("isJumping");
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             currentVelocity += new Vector2(moveSpeed, 0);
+            animator.SetTrigger("isWalking");
+            spriteRenderer.flipX = false;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             currentVelocity += new Vector2(-moveSpeed, 0);
+            animator.SetTrigger("isWalking");
+            spriteRenderer.flipX = true;
         }
 
         body.velocity = currentVelocity;
@@ -39,20 +50,29 @@ public class playerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                animator.SetTrigger("isJumping");
                 body.AddForce(new Vector2(0, 1) * powerJump);
                 currentJump++;
             }
         }
-         
+
+        if (body.velocity.y <0)
+        {
+            animator.SetTrigger("isFalling");
+        }
+
     }
 
+    public void getHit(int mobStrength)
+    {
+        body.AddForce(new Vector2(1, 1) * mobStrength);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             currentJump = 0;
         }
-        
     }
 
     private void OnCollisionStay2D(Collision2D collision)

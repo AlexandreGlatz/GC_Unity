@@ -4,40 +4,56 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
+    public int pv;
+    bool isInvincible;
+    private SpriteRenderer spriteRenderer;
+    public Collider2D boarBody;
+    public Collider2D playerBody;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         
     }
 
-    public int pv;
-    bool isInvincible;
 
     public void TakeDamage(int damage)
     {
-        if (isInvincible)
+        if (!isInvincible)
         {
             pv -= damage;
-
             if (pv < 0)
             {
                 Death();
             }
 
             StartCoroutine(Invincibility());
+            
         }
         else
         {
-            print("jsuis invincible");
+            StartCoroutine(Blink());
+            Physics2D.IgnoreCollision(boarBody, playerBody,true);
         }
     }
 
+    public IEnumerator Blink()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            spriteRenderer.enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.enabled = true;
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
     public void Death()
     {
         Destroy(gameObject);
@@ -50,5 +66,6 @@ public class Life : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         isInvincible = false;
+        Physics2D.IgnoreCollision(boarBody, playerBody, false);
     }
 }
