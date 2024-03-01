@@ -10,11 +10,13 @@ public class player_water : MonoBehaviour
     public float powerjump;
     private float yMin, yMax;
     public float gravity;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+    private bool rotate;
 
 
 
 
+    
 
 
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class player_water : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>(); 
         spriteRenderer = GetComponent<SpriteRenderer>();    
+        rotate = false;
     }
 
 
@@ -31,20 +34,29 @@ public class player_water : MonoBehaviour
         Vector2 currentVelocity = new Vector2(0, body.velocity.y);
         float Spritesize = GetComponent<SpriteRenderer>().bounds.size.y;
         float camheight = Camera.main.orthographicSize;
-        spriteRenderer.flipY = false;   
 
         yMin = -camheight + Spritesize/2;
         yMax = camheight - Spritesize/2;
         
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            currentVelocity += new Vector2(1*speed,0);
-            
+           currentVelocity += new Vector2(1*speed,0);
+            if (rotate)
+            {
+                transform.Rotate(transform.rotation.x+180, 0, 0);
+                rotate = false;
+            }
+
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q))
         {
             currentVelocity += new Vector2(-1*speed,0);
-            spriteRenderer.flipY = true;
+            if (rotate == false)
+            {
+                transform.Rotate(transform.rotation.x-180, 0, 0);
+                rotate = true;
+            }
+
         }
 
 

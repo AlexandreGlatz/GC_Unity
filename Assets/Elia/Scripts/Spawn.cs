@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class Spawn : MonoBehaviour
 {
-
+    private System.Random random;
     public GameObject spawner;
     public GameObject follow;
     public GameObject objectToSpawn;
@@ -16,7 +16,9 @@ public class Spawn : MonoBehaviour
     private List<Vector2> allitems = new List<Vector2>();
     private Vector2 spawn_position;
     private int Kelp_counter;
-    private int side;
+    private Vector3 screen_top, screen_bottom;
+    private List<Vector2> spawn_height;
+
 
     // Start is called before the first frame update
 
@@ -25,24 +27,35 @@ public class Spawn : MonoBehaviour
     {  
         Camera cam = Camera.main;
         halflength = (cam.orthographicSize * cam.aspect);
-        startpos = spawner.transform.position.x;
+        startpos = 0;
         distance = halflength;
-        Kelp_counter = 0;   
+        allitems.Clear();
+        Destroy(GameObject.FindWithTag("Kelp"));
+        Kelp_counter = 0;
+        screen_top = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0));
+        screen_bottom = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        
+        float screen_height = 2*cam.orthographicSize;
+        float screen_3 = screen_height / 3;
+        Vector2 top_zone = new Vector2(screen_top[1], screen_top[1] - screen_3);
+        Vector2 mid_zone = new Vector2(screen_top[1] - screen_3, screen_bottom[1] + screen_3);
+        Vector2 bottom_zone = new Vector2(screen_bottom[1] + screen_3, screen_bottom[1]);
+        spawn_height = new List<Vector2>();
+
+        spawn_height.Add (top_zone);spawn_height.Add(mid_zone);spawn_height.Add(bottom_zone);
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (follow.transform.position.x - startpos < distance*-1) 
-        {
-            side = -1;
-            SpawnItem(side);
-        } else if (follow.transform.position.x - startpos > distance)
-        {
+        random = new System.Random();
 
-            side = 1;
-            SpawnItem(side);
+
+        if (follow.transform.position.x - startpos > distance) 
+        {
+            SpawnItem();
             startpos += distance;
         }
 
@@ -54,23 +67,36 @@ public class Spawn : MonoBehaviour
 
     }
 
-    void SpawnItem(int side)
+    void SpawnItem()
     {
-        Instantiate(objectToSpawn);
-        Kelp_counter += 1;
-        objectToSpawn.name = "Kelp"+Kelp_counter;
-        objectToSpawn.transform.position = new Vector3(spawner.transform.position.x + (halflength*side),spawner.transform.position.y,0);
-        spawn_position = new Vector2(Kelp_counter, objectToSpawn.transform.position.x);
-        allitems.Add(spawn_position);
-        print(String.Join("; ", allitems));
+
+        for (int count = 0; count < 3; count++)
+        {
+
+            Instantiate(objectToSpawn);
+            Kelp_counter += 1;
+            objectToSpawn.name = "Kelp" + Kelp_counter;
+
+            Vector2 position_y = spawn_height[count];
+            System.Random random = new System.Random();
+            double random_position = ( (random.NextDouble() * (position_y[0] - position_y[1]) ) + position_y[1]);
+            float random_position_y = Convert.ToSingle(random_position);   
+            print(random_position_y);
+
+            int random_size = random.Next(2, 4);
+            objectToSpawn.transform.localScale = new Vector3(random_size,random_size, random_size); 
+            objectToSpawn.transform.position = new Vector3(follow.transform.position.x + halflength * 2,random_position_y, 0);
+            spawn_position = new Vector2(Kelp_counter, objectToSpawn.transform.position.x);
+            allitems.Add(spawn_position);
+        }
     }
 
     void DeleteItem(List<Vector2> list)
     {
         for(int count = 0; count < allitems.Count; count++) 
         {
-            if (list[count][1] > follow.transform.position.x + halflength || list[count][1] < follow.transform.position.x - halflength)
-            {
+            if (list[count][1] < follow.transform.position.x - halflength)
+            {   
                 GameObject todestroy = GameObject.Find("Kelp" + list[count][0]+"(Clone)");
                 Destroy(todestroy);
                 list.RemoveAt(count);
