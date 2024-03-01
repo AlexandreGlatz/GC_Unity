@@ -8,11 +8,12 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D body;
     public Animator animator;
     private SpriteRenderer spriteRenderer;
+    public CameraFollow cam;
 
 
     public float powerJump;
     public float moveSpeed;
-    int maxJump = 3;
+    int maxJump = 1;
     int currentJump = 0;
 
     //Start is called before the first frame update
@@ -73,6 +74,11 @@ public class playerMovement : MonoBehaviour
         {
             currentJump = 0;
         }
+
+        if (collision.gameObject.tag == "lowCam")
+        {
+            cam.lowerCam = true;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -82,7 +88,10 @@ public class playerMovement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-
+        if (collision.gameObject.tag == "lowCam")
+        {
+            cam.lowerCam = false;
+        }
     }
 
 }

@@ -91,6 +91,8 @@ public class mobBehavior : MonoBehaviour
             transform.Rotate(0,transform.rotation.y-180, 0);
             wallTouched = true;
             walkDir = !walkDir;
+
+
         } 
 
 

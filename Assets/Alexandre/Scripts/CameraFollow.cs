@@ -16,6 +16,7 @@ public class CameraFollow : MonoBehaviour
     Vector3 shakeTarget;
     float shakeEnd;
     bool isShaking;
+    public bool lowerCam = false; 
 
     void FixedUpdate()
     {
@@ -29,6 +30,7 @@ public class CameraFollow : MonoBehaviour
                 isShaking = false;
             }
             playerPositon.y += offSetY;
+            playerPositon.x += offSetX;
             playerPositon -= shakeTarget;
             var moveVector = Vector3.Lerp(playerPositon, transform.position, .92f);
             moveVector.z = -10;
@@ -36,11 +38,28 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
+            if (lowerCam)
+            {
+                print("cam");
+                offSetX = -1.2f;
+                offSetY = -3f;
+            }
             playerPositon.y += offSetY;
+            playerPositon.x += offSetX;
             var moveVector = Vector3.Lerp(playerPositon, transform.position, Smooth);
             moveVector.z = -10;
             gameObject.transform.position = moveVector;
         }
 
+        
+
+
     }
+    public void ShakeCamera(float x, float y, float duration)
+    {
+        shakeTarget = new Vector3(x, y);
+        isShaking = true;
+        shakeEnd = Time.time + duration;
+    }
+
 }
