@@ -3840,6 +3840,7 @@ GameObject:
   - component: {fileID: 1234167638}
   - component: {fileID: 1234167637}
   - component: {fileID: 1234167639}
+  - component: {fileID: 1234167640}
   m_Layer: 0
   m_Name: boar
   m_TagString: boar
@@ -3992,9 +3993,30 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0124544045, y: -0.07507003}
-  m_Size: {x: 0.3394275, y: 0.18481284}
+  m_Offset: {x: 0.010093578, y: 0.08445765}
+  m_Size: {x: 0.37153947, y: 0.1616409}
   m_Direction: 1
+--- !u!95 &1234167640
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234167634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -4376089204188223548, guid: 57220949ec7509c41ab29f8411782cb5, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1239281583
 GameObject:
   m_ObjectHideFlags: 0

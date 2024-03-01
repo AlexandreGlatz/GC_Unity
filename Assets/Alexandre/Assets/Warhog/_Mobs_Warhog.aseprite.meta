@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638448933830621849
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: _Mobs_Warhog_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.07511737}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 54
-      y: 226
-      width: 36
-      height: 213
-    spriteID: e53bbe7a913e5824dbd09c7f2297b1dd
+      x: 4
+      y: 31
+      width: 33
+      height: 18
+    spriteID: ea2bfafa1c6ec6e4ea4aed7fec2cae2e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 54, y: 226}
+    uvTransform: {x: 4, y: 31}
   - name: _Mobs_Warhog_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 98
-      y: 225
-      width: 36
-      height: 212
-    spriteID: ed0c0f44f15bb9d418ed61b0dc8b617a
+      x: 4
+      y: 161
+      width: 33
+      height: 17
+    spriteID: c9377b5e34a7fd141a9f1ecc3a9a7935
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 98, y: 225}
+    uvTransform: {x: 4, y: 161}
   - name: _Mobs_Warhog_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.07511737}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 54}
     rect:
       serializedVersion: 2
-      x: 98
-      y: 4
-      width: 36
-      height: 213
-    spriteID: 50f1acb2ffa41f5468ccd0ed03761f3a
+      x: 4
+      y: 57
+      width: 33
+      height: 18
+    spriteID: f679d683f1327ac4eb0ac49e33ca73fc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,19 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 98, y: 4}
+    uvTransform: {x: 4, y: 57}
   - name: _Mobs_Warhog_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.07476635}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 54
-      y: 4
-      width: 36
-      height: 214
-    spriteID: 4b5ad3fa77d5e4242b7bd21ca4bb4578
+      x: 4
+      y: 83
+      width: 33
+      height: 18
+    spriteID: b0800524432574d439f1a4ddd79d21cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,19 +200,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 54, y: 4}
+    uvTransform: {x: 4, y: 83}
   - name: _Mobs_Warhog_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 142
-      y: 4
-      width: 36
-      height: 212
-    spriteID: 6b6a49a9852c06941bf2c6097a48205e
+      x: 4
+      y: 211
+      width: 33
+      height: 16
+    spriteID: 5fe7d96cbed0a6948915d853cf4c6091
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 142, y: 4}
+    uvTransform: {x: 4, y: 211}
   - name: _Mobs_Warhog_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.07619048}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 274
-      y: 4
-      width: 36
-      height: 210
-    spriteID: c5b68d0973adda84cb9cf4a1d736aded
+      x: 45
+      y: 53
+      width: 33
+      height: 15
+    spriteID: 12331e0717baec64c820d849291f8195
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,39 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 274, y: 4}
+    uvTransform: {x: 45, y: 53}
   - name: _Mobs_Warhog_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: -0.07981221}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 225
-      width: 38
-      height: 213
-    spriteID: ed5b6bb9e8392f2469bcffab78a19b01
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 225}
-  - name: _Mobs_Warhog_Frame_7
-    originalName: 
-    pivot: {x: 0.5, y: -0.07511737}
+    pivot: {x: 0.46969697, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 42
-      height: 213
-    spriteID: ec5c08cdaab5f52449e97d13d02f77f0
+      width: 33
+      height: 19
+    spriteID: 349fb60b1cdf3374b8d7ed92e50566e4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,18 +261,38 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: _Mobs_Warhog_Frame_7
+    originalName: 
+    pivot: {x: 0.44285715, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 4
+      width: 35
+      height: 17
+    spriteID: 2fe8b3ee0f893a54ab0868730821a496
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 4}
   - name: _Mobs_Warhog_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.08018868}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 142
-      y: 224
-      width: 36
-      height: 212
-    spriteID: b5942b6e0be94464aae382cd04a591b0
+      x: 4
+      y: 109
+      width: 33
+      height: 18
+    spriteID: 6b619ecc9e6807d45966c5646819223c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,19 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 142, y: 224}
+    uvTransform: {x: 4, y: 109}
   - name: _Mobs_Warhog_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: -0.08018868}
+    pivot: {x: 0.484375, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 186
-      y: 4
-      width: 36
-      height: 212
-    spriteID: aaf87559ae91e2b44a69e79341ac0386
+      x: 4
+      y: 135
+      width: 32
+      height: 18
+    spriteID: 5cddc0e4a239ff6418e75d4380783b62
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,39 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 186, y: 4}
-  - name: _Mobs_Warhog_Frame_10
-    originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 186
-      y: 224
-      width: 36
-      height: 212
-    spriteID: 66002e84b171994448001c3842831cd5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 186, y: 224}
+    uvTransform: {x: 4, y: 135}
   - name: _Mobs_Warhog_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 230
-      y: 4
-      width: 36
-      height: 212
-    spriteID: 14de3887a6c28184d8007b46b4881d57
+      x: 4
+      y: 235
+      width: 33
+      height: 16
+    spriteID: d1c71bb49fa212e4a8ca2a27f20634f7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -360,59 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 230, y: 4}
-  - name: _Mobs_Warhog_Frame_12
-    originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 230
-      y: 224
-      width: 36
-      height: 212
-    spriteID: 3d366e53102282b4ead86296f211d892
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 230, y: 224}
-  - name: _Mobs_Warhog_Frame_13
-    originalName: 
-    pivot: {x: 0.5, y: -0.07655502}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 274
-      y: 222
-      width: 36
-      height: 209
-    spriteID: 030dcb9f27bb85b4b97e885b0e0f43ef
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 274, y: 222}
+    uvTransform: {x: 4, y: 235}
   - name: _Mobs_Warhog_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: -0.077294685}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 318
-      y: 4
-      width: 36
-      height: 207
-    spriteID: e6072acc904215a41a0e0589c24973dc
+      x: 45
+      y: 99
+      width: 33
+      height: 13
+    spriteID: 94467cf5203b4eb408138691d31dcf84
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -420,19 +360,79 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 318, y: 4}
+    uvTransform: {x: 45, y: 99}
+  - name: _Mobs_Warhog_Frame_10
+    originalName: 
+    pivot: {x: 0.484375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 186
+      width: 32
+      height: 17
+    spriteID: 0efa639a75341ab46b79a9948a59ea0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+  - name: _Mobs_Warhog_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 29
+      width: 33
+      height: 16
+    spriteID: cff47ce102e4b5e45a0126630be9c233
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 29}
+  - name: _Mobs_Warhog_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 76
+      width: 33
+      height: 15
+    spriteID: 7c6b2277017349945b004bb9dd5f3d8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 76}
   - name: _Mobs_Warhog_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: -0.07804878}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 318
-      y: 219
-      width: 36
-      height: 205
-    spriteID: 2749c620daf04de49b48ce50e4c66861
+      x: 45
+      y: 120
+      width: 33
+      height: 12
+    spriteID: 6098ea9afdbb19c4095ee18007c0421f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -440,8 +440,328 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 318, y: 219}
-  spriteSheetImportData: []
+    uvTransform: {x: 45, y: 120}
+  spriteSheetImportData:
+  - name: _Mobs_Warhog_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9
+      y: 288
+      width: 33
+      height: 19
+    spriteID: f2d397920051b224b8d82709df5312ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 290
+      width: 33
+      height: 18
+    spriteID: e6d2562f8cab37443a35cd61a8baac97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 289
+      width: 33
+      height: 17
+    spriteID: 1ec1390d21ef5bc479a81e6086cf5d95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 287
+      width: 33
+      height: 18
+    spriteID: 15a6a8b3899e5594c87f162f40df8c20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 288
+      width: 32
+      height: 17
+    spriteID: 8f054d0d9fab529419095622cf99ed5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 288
+      width: 33
+      height: 16
+    spriteID: d3df88f0f418045428b4db6dfb94ba19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 277
+      y: 286
+      width: 33
+      height: 15
+    spriteID: f51be98dcf221274caf37ed18964753f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 321
+      y: 283
+      width: 33
+      height: 12
+    spriteID: 20de352d5e4010746a55e12cf5360060
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11
+      y: 68
+      width: 35
+      height: 17
+    spriteID: 871c8cbf5f7777b4fb602016333b8d1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 68
+      width: 33
+      height: 18
+    spriteID: 91063ec67e04a2e4080ddf44952ca411
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 68
+      width: 33
+      height: 18
+    spriteID: 98ae957ce159f184a8a052383d7d09b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 68
+      width: 33
+      height: 16
+    spriteID: 0996691aaef39e0418224f83a019b26f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 67
+      width: 32
+      height: 18
+    spriteID: 528e1f4f10ea2894f9b324e229cb9a4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 68
+      width: 33
+      height: 16
+    spriteID: 2a702fefacf896148bb246bbf7a1afd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 277
+      y: 68
+      width: 33
+      height: 15
+    spriteID: bb0857e773e62594fa42009f2955fc28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: _Mobs_Warhog_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 321
+      y: 68
+      width: 33
+      height: 13
+    spriteID: 11d98a44ea8320542a33154f2debda84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     guid: 662333591
@@ -453,135 +773,159 @@ ScriptedImporter:
     - name: _Mobs_Warhog_Frame_0
       frameIndex: 0
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 213
-      spriteId: e53bbe7a913e5824dbd09c7f2297b1dd
+        x: 0
+        y: 0
+        width: 33
+        height: 18
+      spriteId: ea2bfafa1c6ec6e4ea4aed7fec2cae2e
     - name: _Mobs_Warhog_Frame_1
       frameIndex: 1
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 212
-      spriteId: ed0c0f44f15bb9d418ed61b0dc8b617a
+        x: 0
+        y: 0
+        width: 33
+        height: 17
+      spriteId: c9377b5e34a7fd141a9f1ecc3a9a7935
     - name: _Mobs_Warhog_Frame_2
       frameIndex: 2
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 213
-      spriteId: 50f1acb2ffa41f5468ccd0ed03761f3a
+        x: 0
+        y: 0
+        width: 33
+        height: 18
+      spriteId: f679d683f1327ac4eb0ac49e33ca73fc
     - name: _Mobs_Warhog_Frame_3
       frameIndex: 3
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 214
-      spriteId: 4b5ad3fa77d5e4242b7bd21ca4bb4578
+        x: 0
+        y: 0
+        width: 33
+        height: 18
+      spriteId: b0800524432574d439f1a4ddd79d21cf
     - name: _Mobs_Warhog_Frame_4
       frameIndex: 4
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 212
-      spriteId: 6b6a49a9852c06941bf2c6097a48205e
+        x: 0
+        y: 0
+        width: 33
+        height: 16
+      spriteId: 5fe7d96cbed0a6948915d853cf4c6091
     - name: _Mobs_Warhog_Frame_5
       frameIndex: 5
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 210
-      spriteId: c5b68d0973adda84cb9cf4a1d736aded
+        x: 0
+        y: 0
+        width: 33
+        height: 15
+      spriteId: 12331e0717baec64c820d849291f8195
     - name: _Mobs_Warhog_Frame_6
       frameIndex: 6
       cellRect:
-        x: 13
-        y: 17
-        width: 38
-        height: 213
-      spriteId: ed5b6bb9e8392f2469bcffab78a19b01
+        x: 1
+        y: 0
+        width: 33
+        height: 19
+      spriteId: 349fb60b1cdf3374b8d7ed92e50566e4
     - name: _Mobs_Warhog_Frame_7
       frameIndex: 7
       cellRect:
-        x: 11
-        y: 16
-        width: 42
-        height: 213
-      spriteId: ec5c08cdaab5f52449e97d13d02f77f0
+        x: 1
+        y: 0
+        width: 35
+        height: 17
+      spriteId: 2fe8b3ee0f893a54ab0868730821a496
     - name: _Mobs_Warhog_Frame_8
       frameIndex: 8
       cellRect:
-        x: 14
-        y: 17
-        width: 36
-        height: 212
-      spriteId: b5942b6e0be94464aae382cd04a591b0
+        x: 0
+        y: 0
+        width: 33
+        height: 18
+      spriteId: 6b619ecc9e6807d45966c5646819223c
     - name: _Mobs_Warhog_Frame_9
       frameIndex: 9
       cellRect:
-        x: 14
-        y: 17
-        width: 36
-        height: 212
-      spriteId: aaf87559ae91e2b44a69e79341ac0386
+        x: 1
+        y: 0
+        width: 32
+        height: 18
+      spriteId: 5cddc0e4a239ff6418e75d4380783b62
     - name: _Mobs_Warhog_Frame_10
       frameIndex: 10
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 212
-      spriteId: 66002e84b171994448001c3842831cd5
+        x: 1
+        y: 0
+        width: 32
+        height: 17
+      spriteId: 0efa639a75341ab46b79a9948a59ea0d
     - name: _Mobs_Warhog_Frame_11
       frameIndex: 11
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 212
-      spriteId: 14de3887a6c28184d8007b46b4881d57
+        x: 0
+        y: 0
+        width: 33
+        height: 16
+      spriteId: d1c71bb49fa212e4a8ca2a27f20634f7
     - name: _Mobs_Warhog_Frame_12
       frameIndex: 12
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 212
-      spriteId: 3d366e53102282b4ead86296f211d892
+        x: 0
+        y: 0
+        width: 33
+        height: 16
+      spriteId: cff47ce102e4b5e45a0126630be9c233
     - name: _Mobs_Warhog_Frame_13
       frameIndex: 13
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 209
-      spriteId: 030dcb9f27bb85b4b97e885b0e0f43ef
+        x: 0
+        y: 0
+        width: 33
+        height: 15
+      spriteId: 7c6b2277017349945b004bb9dd5f3d8d
     - name: _Mobs_Warhog_Frame_14
       frameIndex: 14
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 207
-      spriteId: e6072acc904215a41a0e0589c24973dc
+        x: 0
+        y: 0
+        width: 33
+        height: 13
+      spriteId: 94467cf5203b4eb408138691d31dcf84
     - name: _Mobs_Warhog_Frame_15
       frameIndex: 15
       cellRect:
-        x: 14
-        y: 16
-        width: 36
-        height: 205
-      spriteId: 2749c620daf04de49b48ce50e4c66861
+        x: 0
+        y: 0
+        width: 33
+        height: 12
+      spriteId: 6098ea9afdbb19c4095ee18007c0421f
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 256}
+  canvasSize: {x: 33, y: 18}
