@@ -9,6 +9,7 @@ TagManager:
   - wall
   - player
   - lowCam
+  - captureZone
   layers:
   - Default
   - TransparentFX

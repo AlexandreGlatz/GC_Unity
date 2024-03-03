@@ -13,25 +13,25 @@ public class mobBehavior : MonoBehaviour
     public playerMovement player;
     public Life life;
     public MobLife mobLife;
+    public Animator parentAnim;
 
     public int boarHp = 3;
     public int boarDamage = 1;
     public int strength = 250;
     public int wallImpact = 15000;
-    public float initialMoveSpeed;
+    public float initialMoveSpeed = 1;
 
+    public bool walkDir = true; //true = left false = right
+    public bool isCaptured = false;
     public bool playerSeen;
     public bool isCharging = false;
     public bool wallTouched = false;
     public bool isDead = false;
     public bool canWalk = true; 
 
-    private bool walkDir = true; //true = left false = right
     private bool isAttacking = false;
     private float moveSpeed;
-
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,12 @@ public class mobBehavior : MonoBehaviour
         if (!isDead)
         {
             Walk();
+        }
+
+        if (isCaptured)
+        {
+            parentAnim.SetTrigger("isCaptured");
+            animator.SetTrigger("isCaptured");
         }
     }
 

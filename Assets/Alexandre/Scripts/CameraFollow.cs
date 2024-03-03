@@ -9,9 +9,10 @@ public class CameraFollow : MonoBehaviour
 
     [Range(0f, 1f)]
     public float Smooth;
-
-    public float offSetY;
-    public float offSetX;
+    private float offSetY;
+    private float offSetX;
+    public float initOffSetY;
+    public float initOffSetX;
 
     Vector3 shakeTarget;
     float shakeEnd;
@@ -40,9 +41,13 @@ public class CameraFollow : MonoBehaviour
         {
             if (lowerCam)
             {
-                print("cam");
-                offSetX = -1.2f;
+                offSetX = 5f;
                 offSetY = -3f;
+            }
+            else
+            {
+                offSetX = initOffSetX;
+                offSetY = initOffSetY;
             }
             playerPositon.y += offSetY;
             playerPositon.x += offSetX;
@@ -50,9 +55,6 @@ public class CameraFollow : MonoBehaviour
             moveVector.z = -10;
             gameObject.transform.position = moveVector;
         }
-
-        
-
 
     }
     public void ShakeCamera(float x, float y, float duration)
