@@ -79,7 +79,6 @@ public class playerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 StartCoroutine(catchMob());
-                
             }
         }
 
@@ -87,6 +86,7 @@ public class playerMovement : MonoBehaviour
 
     private IEnumerator catchMob()
     {
+        captureHelp.enabled = false;
         seedBag.enabled = true;
         if (mobBehavior.walkDir)
         {
@@ -101,6 +101,8 @@ public class playerMovement : MonoBehaviour
         seedBag.enabled = true;
         yield return new WaitForSeconds(0.2f);
         mobBehavior.isCaptured = true;
+        yield return new WaitForSeconds(0.5f);
+
     }
 
     public void getHit(int mobStrength)
