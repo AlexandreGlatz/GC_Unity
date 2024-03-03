@@ -12,17 +12,21 @@ public class mobBehavior : MonoBehaviour
     public Animator animator;
     public playerMovement player;
     public Life life;
+    public MobLife mobLife;
 
+    public int boarHp = 3;
     public int boarDamage = 1;
     public int strength = 250;
+    public int wallImpact = 15000;
     public float initialMoveSpeed;
 
     public bool playerSeen;
     public bool isCharging = false;
     public bool wallTouched = false;
+    public bool isDead = false;
+    public bool canWalk = true; 
 
-    private bool canWalk = true; //true = left false = right
-    private bool walkDir = true;
+    private bool walkDir = true; //true = left false = right
     private bool isAttacking = false;
     private float moveSpeed;
 
@@ -37,7 +41,10 @@ public class mobBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
+        if (!isDead)
+        {
+            Walk();
+        }
     }
 
     private void Walk()
@@ -64,11 +71,26 @@ public class mobBehavior : MonoBehaviour
             boarBody.velocity = currentVelocity;
         }
 
+        
         if (wallTouched && isAttacking)
         {
             isAttacking = false;
             canWalk = true;
             animator.ResetTrigger("isCharging");
+            mobLife.TakeDamage();
+            if (isDead)
+            {
+                wallImpact = 1;
+            }
+            if (walkDir)
+            {
+                boarBody.AddForce(new Vector2(-1, 1) * wallImpact);
+            }
+            else
+            {
+                boarBody.AddForce(new Vector2(1, 1) * wallImpact);
+            }
+            
         }
 
 
@@ -84,23 +106,26 @@ public class mobBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //flip upon touching wall
         if (collision.gameObject.tag == "wall")
         {
-            ///flip upon touching wall
-            
             transform.Rotate(0,transform.rotation.y-180, 0);
             wallTouched = true;
             walkDir = !walkDir;
 
+        }
 
-        } 
-
-
-        if (collision.gameObject.tag=="player")
+        //player hit
+        if (collision.gameObject.tag=="player" && !isDead)
         {
-            ///player hit
             StartCoroutine(Hit());
             life.TakeDamage(boarDamage);
+            if (isAttacking)
+            {
+                isAttacking = false;
+                canWalk = true;
+                animator.ResetTrigger("isCharging");
+            }
         }
     }
 

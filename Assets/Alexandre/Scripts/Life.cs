@@ -40,7 +40,7 @@ public class Life : MonoBehaviour
         else
         {
             StartCoroutine(Blink());
-            Physics2D.IgnoreCollision(boarBody, playerBody,true);
+            Physics2D.IgnoreCollision(boarBody, playerBody,true); // ignore collision with mob
         }
     }
 
