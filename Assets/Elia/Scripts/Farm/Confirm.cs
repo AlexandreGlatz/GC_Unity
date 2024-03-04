@@ -25,6 +25,7 @@ public class Confirm : MonoBehaviour
     {
         choosen_seed = Parent.GetComponent<Choice_pannel>().choosen_seed;
         GameObject Plot = GameObject.Find("Plot " + Plot_number);
+        print(choosen_seed.IndexOf(true));
         Plot.GetComponent<Plot>().planted =choosen_seed.IndexOf(true);
         Plot.GetComponent<Plot>().plant_action = true;
 

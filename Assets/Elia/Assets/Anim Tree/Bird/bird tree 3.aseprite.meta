@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 775f1b8190ef2ff46bf79f3a24ad0740
+guid: a9012e82455f51b4e80985c8a6a37565
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprout_Frame_0
+  - name: bird tree 3_Frame_0
     originalName: 
-    pivot: {x: 0.42857146, y: -0.11111111}
+    pivot: {x: 0.55769235, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 7
-      height: 9
-    spriteID: 5c859fdeecce86a4aae13a146c8c3db2
+      width: 52
+      height: 59
+    spriteID: a80aa4e2b250f3349a45d257250dcb14
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,58 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Sprout_Frame_1
+  - name: bird tree 3_Frame_1
     originalName: 
-    pivot: {x: 0.33333334, y: -0.1}
+    pivot: {x: 0.55769235, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 21
-      width: 6
-      height: 10
-    spriteID: 0622143b954146547a6bd331c241defb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 21}
-  - name: Sprout_Frame_2
-    originalName: 
-    pivot: {x: 0.71428573, y: -0.125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 39
-      width: 7
-      height: 8
-    spriteID: 9d052faf3429ceb46a72f74faf7b809e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 39}
-  - name: Sprout_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: -0.125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 19
+      x: 64
       y: 4
-      width: 6
-      height: 8
-    spriteID: 869d819235848e941a50c4a588f65369
+      width: 52
+      height: 59
+    spriteID: 7e6a455a9f77ec246abb8b068184e51c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,52 +160,36 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 19, y: 4}
+    uvTransform: {x: 64, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1125867797
-    name: Sprout
+    guid: -369440554
+    name: bird tree 3
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprout_Frame_0
+    - name: bird tree 3_Frame_0
       frameIndex: 0
       cellRect:
-        x: 13
-        y: 1
-        width: 7
-        height: 9
-      spriteId: 5c859fdeecce86a4aae13a146c8c3db2
-    - name: Sprout_Frame_1
+        x: 3
+        y: 0
+        width: 52
+        height: 59
+      spriteId: a80aa4e2b250f3349a45d257250dcb14
+    - name: bird tree 3_Frame_1
       frameIndex: 1
       cellRect:
-        x: 14
-        y: 1
-        width: 6
-        height: 10
-      spriteId: 0622143b954146547a6bd331c241defb
-    - name: Sprout_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 11
-        y: 1
-        width: 7
-        height: 8
-      spriteId: 9d052faf3429ceb46a72f74faf7b809e
-    - name: Sprout_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 13
-        y: 1
-        width: 6
-        height: 8
-      spriteId: 869d819235848e941a50c4a588f65369
+        x: 3
+        y: 0
+        width: 52
+        height: 59
+      spriteId: 7e6a455a9f77ec246abb8b068184e51c
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}

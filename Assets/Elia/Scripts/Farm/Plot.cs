@@ -18,7 +18,6 @@ public class Plot : MonoBehaviour
     public bool plant_action;
 
     private List<bool> owned_plot;
-    private List<int> Tree_level;
     private bool first_start = true;
     private List<bool> Unlock_seeds;
 
@@ -28,9 +27,8 @@ public class Plot : MonoBehaviour
 
         if (first_start)
         {
-            planted = 0;
+            planted = -1;
             owned_plot = new List<bool> { true, true, false, false, false, false, false, false };
-            Tree_level = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0 };
             Unlock_seeds = new List<bool> { true,true,false,false };
 
         }
@@ -63,7 +61,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (owned_plot[plot_number - 1] && planted == 0)
+        if (owned_plot[plot_number - 1] && planted == -1)
         {
             Destroy(GameObject.FindWithTag("Seed_selector"));
             GameObject Seed_select = Instantiate(seed_selector);
@@ -113,6 +111,7 @@ public class Plot : MonoBehaviour
     void PlantATree(int tree_type)
     {
         GameObject Tree =Instantiate(Tree_type[tree_type]);
+        Tree.transform.SetParent(GameObject.Find("Plot " + plot_number).transform);
         Tree.transform.position = gameObject.transform.position;
         Tree.transform.localScale = new Vector2(4,4);
     }

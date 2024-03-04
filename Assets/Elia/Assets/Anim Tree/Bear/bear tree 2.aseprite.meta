@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e36357a4d632d284eb1a6d450981451f
+guid: 13ed95e7fc54fc64da8e650faf794ff9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Mid_Frame_0
+  - name: bear tree 2_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.4666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 31
-    spriteID: 1558289b46ffb644c9ef6b1b0c8b44af
+      width: 15
+      height: 20
+    spriteID: 506dbe9d6d469154fb0de1157a31fc5f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,59 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: Mid_Frame_1
+    uvTransform: {x: -5, y: 4}
+  - name: bear tree 2_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 44
-      y: 4
-      width: 32
-      height: 31
-    spriteID: 2e22c276ee197f74db4623d1cb3186ef
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
-  - name: Mid_Frame_2
-    originalName: 
-    pivot: {x: 0.516129, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 84
-      y: 4
-      width: 31
-      height: 31
-    spriteID: 6e5a82b9d9d89114d89329b29a2b3f79
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
-  - name: Mid_Frame_3
-    originalName: 
-    pivot: {x: 0.516129, y: 0}
+    pivot: {x: 0.4666667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
-      width: 31
-      height: 32
-    spriteID: 7f4bc67f24f9fc945877bcfe6ab52880
+      y: 32
+      width: 15
+      height: 20
+    spriteID: 348cee6c145335c4e80141f0bb7fb196
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,48 +160,32 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: -5, y: 32}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1756642408
-    name: Mid
+    guid: 1842843338
+    name: bear tree 2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Mid_Frame_0
+    - name: bear tree 2_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 32
-        height: 31
-      spriteId: 1558289b46ffb644c9ef6b1b0c8b44af
-    - name: Mid_Frame_1
+        height: 32
+      spriteId: 506dbe9d6d469154fb0de1157a31fc5f
+    - name: bear tree 2_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 32
-        height: 31
-      spriteId: 2e22c276ee197f74db4623d1cb3186ef
-    - name: Mid_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 0
-        y: 0
-        width: 31
-        height: 31
-      spriteId: 6e5a82b9d9d89114d89329b29a2b3f79
-    - name: Mid_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 0
-        y: 0
-        width: 31
         height: 32
-      spriteId: 7f4bc67f24f9fc945877bcfe6ab52880
+      spriteId: 348cee6c145335c4e80141f0bb7fb196
     linkedCells: []
     parentIndex: -1
   platformSettings: []
