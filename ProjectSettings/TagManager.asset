@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - boar
+  - wall
+  - player
+  - lowCam
+  - captureZone
   - abyss_fish
   - Jelly_fish
   - Seed_selector
