@@ -12,6 +12,7 @@ public class PickupBag : MonoBehaviour{
                 Destroy(moneybag);
 
                 PlayerMovement.instance.IncreaseCurrency(worth);
+
         }
     }
 }
