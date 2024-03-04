@@ -10,6 +10,10 @@ TagManager:
   - player
   - lowCam
   - captureZone
+  - abyss_fish
+  - Jelly_fish
+  - Seed_selector
+  - Unknown
   layers:
   - Default
   - TransparentFX
