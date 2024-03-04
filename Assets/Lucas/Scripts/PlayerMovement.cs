@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //Singleton
+    public static PlayerMovement instance;
     public Rigidbody2D body;
     public Animator animator;
     public float powerJump;
@@ -15,12 +15,31 @@ public class PlayerMovement : MonoBehaviour
     public float z;
     public SpriteRenderer spriteRenderer;
 
-    public AudioSource dedge;
-    public AudioClip clip;
+    [Header("Currency")]
+    public int currency = 0;
+    public TextMeshProUGUI MoneyUI;
+
+
+
+    public void IncreaseCurrency(int amout)
+    {
+        currency += amout;
+        MoneyUI.text = "Money : " + currency;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else if (instance == null)
+        {
+            instance = this;
+        }
+
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -56,22 +75,22 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             body.AddForce(new Vector2(0, 1) * powerJump);
-            dedge.PlayOneShot(clip);
         }
 
         x = PlayerPrefs.GetFloat("x");
         y = body.position.y;
         z = PlayerPrefs.GetFloat("z");
-        print(y);
 
         if (y <= -13)
         {
             Vector3 LoadPosition = new Vector3(-7, -1, 0);
             transform.position = LoadPosition;
-            dedge.PlayOneShot(clip);
         }
 
-        
+
+
+
+
     }
 
 }
