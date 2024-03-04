@@ -30,7 +30,7 @@ public class Spawn : MonoBehaviour
         startpos = 0;
         distance = halflength;
         allitems.Clear();
-        Destroy(GameObject.FindWithTag("Kelp"));
+        Destroy(GameObject.FindWithTag("Jelly_fish"));
         Kelp_counter = 0;
         screen_top = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0));
         screen_bottom = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
@@ -75,13 +75,13 @@ public class Spawn : MonoBehaviour
 
             Instantiate(objectToSpawn);
             Kelp_counter += 1;
-            objectToSpawn.name = "Kelp" + Kelp_counter;
+            objectToSpawn.name = "Jelly_fish" + Kelp_counter;
 
             Vector2 position_y = spawn_height[count];
             System.Random random = new System.Random();
             double random_position = ( (random.NextDouble() * (position_y[0] - position_y[1]) ) + position_y[1]);
             float random_position_y = Convert.ToSingle(random_position);   
-            print(random_position_y);
+
 
             int random_size = random.Next(2, 4);
             objectToSpawn.transform.localScale = new Vector3(random_size,random_size, random_size); 
@@ -97,7 +97,7 @@ public class Spawn : MonoBehaviour
         {
             if (list[count][1] < follow.transform.position.x - halflength)
             {   
-                GameObject todestroy = GameObject.Find("Kelp" + list[count][0]+"(Clone)");
+                GameObject todestroy = GameObject.Find("Jelly_fish" + list[count][0]+"(Clone)");
                 Destroy(todestroy);
                 list.RemoveAt(count);
 

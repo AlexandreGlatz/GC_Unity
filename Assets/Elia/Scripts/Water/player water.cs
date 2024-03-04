@@ -86,6 +86,11 @@ public class player_water : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Jelly_fish")
+        {
+            print("a");
+        }
+
 
     }
 

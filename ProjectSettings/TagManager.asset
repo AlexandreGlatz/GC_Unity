@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Ground
   - abyss_fish
-  - Kelp
+  - Jelly_fish
+  - Seed_selector
+  - Unknown
   layers:
   - Default
   - TransparentFX
