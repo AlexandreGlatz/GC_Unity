@@ -4543,7 +4543,7 @@ MonoBehaviour:
   mobBehavior: {fileID: 1234167638}
   boarBody: {fileID: 1234167639}
   playerBody: {fileID: 866860600}
-  mobHp: 1
+  mobHp: 3
 --- !u!1 &1239281583
 GameObject:
   m_ObjectHideFlags: 0
