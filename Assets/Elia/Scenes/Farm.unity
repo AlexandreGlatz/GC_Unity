@@ -646,7 +646,7 @@ MonoBehaviour:
   - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   plot_price: 0
   sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
   seeds:

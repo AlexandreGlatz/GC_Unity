@@ -53,7 +53,5 @@ public class Choice_pannel : MonoBehaviour
             choosen_seed = new List<bool> { false, false, false, false };
             choosen_seed[clicked] = true;
         }
-        print(string.Join(", ", choosen_seed));
-
     }
 }
