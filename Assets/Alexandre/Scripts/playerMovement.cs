@@ -6,6 +6,7 @@ using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class playerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public CameraFollow cam;
     public mobBehavior mobBehavior;
-    public Canvas captureHelp;
+    public GameObject captureHelp;
+    public LoadingScreen loadingScene;
 
     public SpriteRenderer seedBag;
     public float powerJump;
@@ -27,7 +29,6 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         seedBag.enabled = false;
-        captureHelp.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -86,7 +87,7 @@ public class playerMovement : MonoBehaviour
 
     private IEnumerator catchMob()
     {
-        captureHelp.enabled = false;
+        captureHelp.SetActive(false);
         seedBag.enabled = true;
         if (mobBehavior.walkDir)
         {
@@ -102,7 +103,7 @@ public class playerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         mobBehavior.isCaptured = true;
         yield return new WaitForSeconds(0.5f);
-
+        loadingScene.LoadScene(0); //Goes back to farm
     }
 
     public void getHit(int mobStrength)
@@ -127,7 +128,7 @@ public class playerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "captureZone" && mobBehavior.isDead)
         {
-            captureHelp.enabled = true;
+            captureHelp.SetActive(true);
             canCapture = true;
         }
     }
@@ -146,7 +147,7 @@ public class playerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "captureZone" && mobBehavior.isDead)
         {
-            captureHelp.enabled = false;
+            captureHelp.SetActive(false);
             canCapture = false;
         }
     }
