@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Currency")]
     public int currency = 0;
     public TextMeshProUGUI MoneyUI;
+
+
     private bool canJump = true;
     private bool canCapture = false;
 
@@ -95,15 +97,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (canCapture)
-        {
-            if (Input.GetKey(KeyCode.E))
-            {
-                StartCoroutine(catchMob());
-            }
-        }
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -114,44 +107,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator catchMob()
-    {
-        captureHelp.SetActive(false);
-        seedBag.enabled = true;
-        if (mobBehavior.walkDir)
-        {
-            animator.SetTrigger("isCapturing");
-        }
-        else
-        {
-            animator.SetTrigger("isCapturingLeft");
-        }
-        canJump = false;
-        seedBag.enabled = true;
-        yield return new WaitForSeconds(0.2f);
-        mobBehavior.isCaptured = true;
-        yield return new WaitForSeconds(0.5f);
-        loadingScene.LoadScene(0); //Goes back to farm
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.tag == "captureZone")
-        {
-            captureHelp.SetActive(true);
-            canCapture = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.tag == "captureZone")
-        {
-            captureHelp.SetActive(false);
-            canCapture = false;
-        }
-    }
-
+    
 }

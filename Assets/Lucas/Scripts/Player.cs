@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [Header("Currency")]
+    public int currency = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {

@@ -1,5 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PlayerMovementBirdLevel : MonoBehaviour
@@ -13,8 +19,13 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     public float x;
     public float y;
     public float z;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
     private bool canJump = true;
+    private bool canCapture = false;
+    public SpriteRenderer seedBag;
+
+    public GameObject captureHelp;
+    public LoadingScreen loadingScene;
 
 
     [Header("Currency")]
@@ -44,8 +55,10 @@ public class PlayerMovementBirdLevel : MonoBehaviour
         }
         camera = Camera.main;
 
-        body = GetComponent<Rigidbody2D>();
+
+        seedBag.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        body = GetComponent<Rigidbody2D>();
 
 
     }
@@ -97,15 +110,15 @@ public class PlayerMovementBirdLevel : MonoBehaviour
             transform.position = LoadPosition;
         }
 
-        if (x >= (float)12.1)
+        if (x >= (float)10.1)
         {
-            Vector3 LoadPosition = new Vector3((float)-12, gameObject.transform.position.y, 0);
+            Vector3 LoadPosition = new Vector3((float)-10, gameObject.transform.position.y, 0);
             transform.position = LoadPosition;
         }
 
-        if (x <= (float)-12.1)
+        if (x <= (float)-10.1)
         {
-            Vector3 LoadPosition = new Vector3((float)12, gameObject.transform.position.y, 0);
+            Vector3 LoadPosition = new Vector3((float)10, gameObject.transform.position.y, 0);
             transform.position = LoadPosition;
         }
 
@@ -122,8 +135,25 @@ public class PlayerMovementBirdLevel : MonoBehaviour
             camera.transform.position = LoadPosition;
         }
 
-        
+        if (canCapture)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                StartCoroutine(catchMob());
+            }
+        }
 
+    }
+
+    private IEnumerator catchMob()
+    {
+        print("aa");
+        captureHelp.SetActive(false);
+        seedBag.enabled = true;
+        animator.SetTrigger("isCapturing");
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
+        loadingScene.LoadScene(0); //Goes back to farm
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -131,6 +161,24 @@ public class PlayerMovementBirdLevel : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             canJump = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(true);
+            canCapture = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(false);
+            canCapture = false;
         }
     }
 
