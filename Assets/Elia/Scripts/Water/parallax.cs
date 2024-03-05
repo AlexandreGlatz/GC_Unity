@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class parallax : MonoBehaviour
+public class parallax2 : MonoBehaviour
 {
     private float length, startpos;
     public GameObject cam;
