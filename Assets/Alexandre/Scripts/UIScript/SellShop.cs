@@ -53,14 +53,14 @@ public class SellShop : MonoBehaviour
     private IEnumerator ShowLockText()
     {
         unlockText.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         unlockText.SetActive(false);
     }
 
     private IEnumerator ShowEnoughText()
     {
         enoughText.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         enoughText.SetActive(false);
     }
 }
