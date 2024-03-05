@@ -31,7 +31,7 @@ public class SellShop : MonoBehaviour
             seed.seedAmount -= 1;
             seed.amountSold += 1;
 
-            if (seed.amountSold >=10) 
+            if (seed.amountSold >=2) 
             {
                 seed.intValue -= 1;
                 seed.amountSold =0;
