@@ -14,6 +14,8 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     public float y;
     public float z;
     public SpriteRenderer spriteRenderer;
+    private bool canJump = true;
+
 
     [Header("Currency")]
     public int currency = 0;
@@ -78,9 +80,10 @@ public class PlayerMovementBirdLevel : MonoBehaviour
         {
             body.AddForce(new Vector2(0, -1) * powerJump);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             body.AddForce(new Vector2(0, 1) * powerJump);
+            canJump = false;
         }
 
 
@@ -119,6 +122,16 @@ public class PlayerMovementBirdLevel : MonoBehaviour
             camera.transform.position = LoadPosition;
         }
 
+        
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            canJump = true;
+        }
     }
 
 }
