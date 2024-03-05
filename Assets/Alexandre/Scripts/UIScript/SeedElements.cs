@@ -7,11 +7,13 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
 
+
 public class SeedElements : MonoBehaviour
 {
     public TMP_Text value;
     public Image Graph;
     public Image locker;
+    public Image thumbnail;
     public Sprite arrowSprite;
     public Sprite staySprite;
 
@@ -24,11 +26,14 @@ public class SeedElements : MonoBehaviour
 
     private int changeNumber;
     private Sprite selectedSprite;
+    private int wait;
+    private float initScaleX = 0.09f;
 
     // Start is called before the first frame update
     void Start()
     {
         intValue = int.Parse(value.text);
+        StartCoroutine(ChangeTendency());
     }
 
     // Update is called once per frame
@@ -38,81 +43,62 @@ public class SeedElements : MonoBehaviour
         {
             intValue = 0;
         }
-        StartCoroutine(ChangeTendency());
+        
         value.text = intValue.ToString();
     }
 
     IEnumerator ChangeTendency()
     {
-        if(intValue > 10 && intValue<10000) 
+        changeNumber = Random.Range(-1, 2);
+        int amount = Random.Range(1, 11);
+
+        if (intValue > 10 && intValue < 1000)
         {
-            changeNumber = Random.Range(-1, 1);
+            Graph.transform.localScale = new Vector3(initScaleX, Graph.transform.localScale.y, Graph.transform.localScale.z);
             if (changeNumber < 0)
             {
                 selectedSprite = arrowSprite;
-                Graph.transform.Rotate(0, 0, 90);
+                Graph.transform.eulerAngles = new Vector3(0,0,90); 
                 Graph.color = Color.red;
             }
             else if (changeNumber > 0)
             {
                 selectedSprite = arrowSprite;
-                Graph.transform.Rotate(0, 0, -90);
+                Graph.transform.eulerAngles = new Vector3(0, 0, -90);
                 Graph.color = Color.green;
             }
             else
             {
                 selectedSprite = staySprite;
-                Graph.transform.Rotate(0, 0, 0);
+                Graph.transform.localScale = new Vector3(0.04f, Graph.transform.localScale.y, Graph.transform.localScale.z);
                 Graph.color = Color.gray;
             }
+
         }
-        else if (intValue <10)
+        else if (intValue < 10)
         {
             selectedSprite = arrowSprite;
-            Graph.transform.Rotate(0, 0, -90);
+            Graph.transform.eulerAngles = new Vector3(0, 0, -90);
             Graph.color = Color.green;
-            StartCoroutine(BigStonks());
+            changeNumber = 2;
         }
-        else if (intValue > 10000)
+        else if (intValue > 1000)
         {
             selectedSprite = arrowSprite;
-            Graph.transform.Rotate(0, 0, 90);
+            Graph.transform.eulerAngles = new Vector3(0, 0, 90);
             Graph.color = Color.red;
-            StartCoroutine(BigBankruptcy());
+            changeNumber = -2;
         }
-        
-        int wait = 0;
-        while (wait <= 10)
-        {
-            wait++;
-            intValue += changeNumber;
-            Graph.sprite = selectedSprite;
-            yield return new WaitForSeconds(10);
-        }
-    }
 
-    IEnumerator BigStonks()
-    {
-        int wait = 0;
-        while (wait <= 10)
-        {
-            wait++;
-            intValue += changeNumber;
-            Graph.sprite = selectedSprite;
-            yield return new WaitForSeconds(10);
-        }
-    }
+        wait = 0;
 
-    IEnumerator BigBankruptcy()
-    {
-        int wait = 0;
-        while (wait <= 10)
-        {
-            wait++;
+        for (int i = 0; i < amount; i++) {
             intValue += changeNumber;
             Graph.sprite = selectedSprite;
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(1);
+            wait++;
         }
+        StartCoroutine(ChangeTendency());
     }
 
 }
