@@ -18,6 +18,7 @@ public class Spawn : MonoBehaviour
     private int Kelp_counter;
     private Vector3 screen_top, screen_bottom;
     private List<Vector2> spawn_height;
+    private int maxspawn;
 
 
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class Spawn : MonoBehaviour
         spawn_height = new List<Vector2>();
 
         spawn_height.Add (top_zone);spawn_height.Add(mid_zone);spawn_height.Add(bottom_zone);
+        maxspawn = 10;
 
     }
 
@@ -53,18 +55,20 @@ public class Spawn : MonoBehaviour
         random = new System.Random();
 
 
-        if (follow.transform.position.x - startpos > distance) 
+        if (maxspawn > 0)
         {
-            SpawnItem();
-            startpos += distance;
+            if (follow.transform.position.x - startpos > distance)
+            {
+                SpawnItem();
+                startpos += distance;
+            }
         }
-
 
 
         if (allitems.Count != 0){
             DeleteItem(allitems);
         }
-
+        
     }
 
     void SpawnItem()
@@ -87,8 +91,12 @@ public class Spawn : MonoBehaviour
             objectToSpawn.transform.localScale = new Vector3(random_size,random_size, random_size); 
             objectToSpawn.transform.position = new Vector3(follow.transform.position.x + halflength * 2,random_position_y, 0);
             spawn_position = new Vector2(Kelp_counter, objectToSpawn.transform.position.x);
+
+            objectToSpawn.GetComponent<CapsuleCollider2D>().offset = new Vector2(0,(float)0.63);
+
             allitems.Add(spawn_position);
         }
+        maxspawn -= 1;
     }
 
     void DeleteItem(List<Vector2> list)
