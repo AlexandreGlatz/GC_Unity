@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,11 +15,16 @@ public class PlayerMovement : MonoBehaviour
     public float y;
     public float z;
     public SpriteRenderer spriteRenderer;
+    public mobBehavior mobBehavior;
+    public GameObject captureHelp;
+    public LoadingScreen loadingScene;
+    public SpriteRenderer seedBag;
 
     [Header("Currency")]
     public int currency = 0;
     public TextMeshProUGUI MoneyUI;
-
+    private bool canJump = true;
+    private bool canCapture = false;
 
 
     public void IncreaseCurrency(int amout)
@@ -72,9 +78,10 @@ public class PlayerMovement : MonoBehaviour
         {
             body.AddForce(new Vector2(0, -1) * powerJump);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             body.AddForce(new Vector2(0, 1) * powerJump);
+            canJump = false;
         }
 
         x = PlayerPrefs.GetFloat("x");
@@ -88,9 +95,63 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        if (canCapture)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                StartCoroutine(catchMob());
+            }
+        }
 
 
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            canJump = true;
+        }
+    }
+
+    private IEnumerator catchMob()
+    {
+        captureHelp.SetActive(false);
+        seedBag.enabled = true;
+        if (mobBehavior.walkDir)
+        {
+            animator.SetTrigger("isCapturing");
+        }
+        else
+        {
+            animator.SetTrigger("isCapturingLeft");
+        }
+        canJump = false;
+        seedBag.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        mobBehavior.isCaptured = true;
+        yield return new WaitForSeconds(0.5f);
+        loadingScene.LoadScene(0); //Goes back to farm
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(true);
+            canCapture = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(false);
+            canCapture = false;
+        }
     }
 
 }

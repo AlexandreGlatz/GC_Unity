@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 117650474}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28912,7 +28912,7 @@ GameObject:
   - component: {fileID: 1598342574}
   m_Layer: 0
   m_Name: Decor_1 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62786,7 +62786,7 @@ GameObject:
   - component: {fileID: 2006142488}
   m_Layer: 0
   m_Name: Decor_1 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
