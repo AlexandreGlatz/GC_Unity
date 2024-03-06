@@ -29,7 +29,7 @@ public class Plot : MonoBehaviour
         {
             planted = -1;
             owned_plot = new List<bool> { true, true, false, false, false, false, false, false };
-            Unlock_seeds = new List<bool> { true,true,true,true };
+            Unlock_seeds = new List<bool> { true,true,true,true }; 
 
         }
 

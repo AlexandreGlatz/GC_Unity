@@ -15,6 +15,8 @@ public class Trees : MonoBehaviour
     int count;
     bool Harvestable;
     GameObject Parent;
+    bool new_state;
+    float tree_time_upgrade;
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +25,23 @@ public class Trees : MonoBehaviour
         
         if (first_start)
         {
-            Time_Start = 3;
             count = 0;
             Harvestable = false;
         }
         Time_pass = Time_Start;
         Parent = this.gameObject.transform.parent.gameObject;
-        
+        tree_time_upgrade = 0;
+        new_state = true;   
     }
 
     // Update is called once per frame
     void Update()
     {
-        Time_pass -= Time.deltaTime;
-        if (Time_pass <= 0 && Tree_state < 5)
+        if (new_state && count<5)
         {
-            count += 1;
+            StartCoroutine(Waitfornewstate());
             animator.SetInteger("State", count);
-            Time_pass = Time_Start;
+            count += 1;
             Tree_state += 1;
         }
         if (Tree_state == 5)
@@ -54,7 +55,15 @@ public class Trees : MonoBehaviour
         if (Harvestable)
         {
             Parent.GetComponent<Plot>().planted = -1;
+            
             Destroy(this.gameObject);  
         }
+    }
+
+    public IEnumerator Waitfornewstate()
+    {
+        new_state = false;
+        yield return new WaitForSeconds(5-tree_time_upgrade);
+        new_state = true;
     }
 }
