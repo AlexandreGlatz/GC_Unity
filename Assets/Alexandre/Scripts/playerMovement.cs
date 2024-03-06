@@ -70,7 +70,7 @@ public class playerMovement : MonoBehaviour
         }
 
         //animate fall
-        if (body.velocity.y <0)
+        if (body.velocity.y < 0)
         {
             animator.SetTrigger("isFalling");
         }
@@ -135,7 +135,7 @@ public class playerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

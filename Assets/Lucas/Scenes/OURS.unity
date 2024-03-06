@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 117650474}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16661,16 +16661,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -7, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 122
-      m_TileSpriteIndex: 122
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -6, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -26817,7 +26807,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a88761ba71c92f541924a288ddaea441, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 187a442253fdca042a345331a37393e7, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: afae7041653f66a498010df26af22db4, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9a3e6d26e5349f64ab92378d811e1ebe, type: 2}
@@ -27116,7 +27106,7 @@ Tilemap:
     m_Data: {fileID: 1609931947, guid: 66453c654294d2045aa5eb98e5ea9f7d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1197615239, guid: 66453c654294d2045aa5eb98e5ea9f7d, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: -154224239, guid: 175243fb8f05f7244adb8932589fda03, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -27171,7 +27161,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -387022189, guid: 175243fb8f05f7244adb8932589fda03, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2613
+  - m_RefCount: 2612
     m_Data:
       e00: 1
       e01: 0
@@ -27190,7 +27180,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2613
+  - m_RefCount: 2612
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -28922,7 +28912,7 @@ GameObject:
   - component: {fileID: 1598342574}
   m_Layer: 0
   m_Name: Decor_1 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62796,7 +62786,7 @@ GameObject:
   - component: {fileID: 2006142488}
   m_Layer: 0
   m_Name: Decor_1 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
