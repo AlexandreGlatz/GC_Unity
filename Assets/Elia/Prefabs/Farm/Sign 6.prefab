@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 414513530408282661}
   - component: {fileID: 6372724438142615455}
+  - component: {fileID: 3048880562850432899}
   m_Layer: 0
-  m_Name: buy sign
+  m_Name: Sign 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.990566, g: 0.7435393, b: 0.36912602, a: 1}
+  m_Sprite: {fileID: 6375832390136720860, guid: b2811eba420aba34c9efb12bbf47838a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3048880562850432899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810011213143095572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cc8c8a7b9d92647a659bd8bcecc1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign_price: 800
+  sign_number: 5

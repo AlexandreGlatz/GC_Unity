@@ -41,6 +41,7 @@ public class AnglerFish : MonoBehaviour
         {
             hp -= 1;
             StartCoroutine(Invincibility());
+            print(hp);
         }
 
         if (hp <= 0)
@@ -56,14 +57,22 @@ public class AnglerFish : MonoBehaviour
     public IEnumerator Invincibility()
     {
         isinvincible = true;
-        yield return new WaitForSeconds((float)0.5);
+        yield return new WaitForSeconds(1);
         isinvincible = false;
 
     }
 
     public IEnumerator GetStunned()
     {
-        yield return new WaitForSeconds((float)1.5);
+        yield return new WaitForSeconds((float)1);
         is_stun = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameObject.Find("player").GetComponent<playerwater>().Contactwithfish();
+        }
     }
 }

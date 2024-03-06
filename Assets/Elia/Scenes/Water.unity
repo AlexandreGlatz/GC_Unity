@@ -836,9 +836,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986bd1f1f79364f4cbdf7f0e259ef25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rock: {fileID: 4212056152460472751, guid: d3757bd64baa2fa4d8856d177df49f76, type: 3}
   spawner: {fileID: 496118503}
   follow: {fileID: 1100883813}
   objectToSpawn: {fileID: 4095124161676388217, guid: 0c0b0824b4a2f2e4da7e01339b9eb0a5, type: 3}
+  Kelp_counter: 0
 --- !u!1 &538260528
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +929,7 @@ Transform:
   m_GameObject: {fileID: 538260528}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.22, z: -10}
+  m_LocalPosition: {x: 0.62, y: 0.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1496,7 +1498,7 @@ Transform:
   m_GameObject: {fileID: 934803307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.28, y: 0.16, z: 0}
+  m_LocalPosition: {x: -9.82, y: 0.16, z: 0}
   m_LocalScale: {x: 2.2757285, y: 2.5408077, z: 1.8090527}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1515,7 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72924e39acf1a343b84a191b5b47490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4.95
   body: {fileID: 934803311}
   is_stun: 0
 --- !u!50 &934803311
@@ -1574,7 +1576,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.42877227, y: 0.045021772}
@@ -1803,10 +1805,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058412194, y: -1.0032356}
+  m_Offset: {x: 0.12913127, y: -1.0032356}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1817,7 +1819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6814761, y: 2.0564804}
+  m_Size: {x: 1.0242046, y: 2.0564804}
   m_EdgeRadius: 0
 --- !u!50 &1100883815
 Rigidbody2D:
@@ -1907,7 +1909,7 @@ Transform:
   m_GameObject: {fileID: 1100883813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

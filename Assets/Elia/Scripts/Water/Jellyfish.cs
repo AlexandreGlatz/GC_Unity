@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Jellyfish : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Jellyfish : MonoBehaviour
             {
 
                 GameObject.Find("abyss fish").GetComponent<AnglerFish>().GetHit();
+                Destroy(gameObject);
             }  
             
             if (collision.gameObject.tag == "Player")
