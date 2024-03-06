@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f435f636f40c8f94c83af54ba819f94d
+guid: 15093eaf5f1486543adf52abb6055c2e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SeedPouch
+  - name: Close
     originalName: 
-    pivot: {x: 0.47619048, y: -0.3}
+    pivot: {x: 0.5, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 20
-    spriteID: dea4d8073be72c443b7f519db1229a8b
+      width: 28
+      height: 28
+    spriteID: b9d7964a0bef48846a666af23c39f3a7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -359704242
-    name: SeedPouch
+    guid: 1669928182
+    name: Close
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SeedPouch
+    - name: Close
       frameIndex: 0
       cellRect:
-        x: 6
-        y: 6
-        width: 21
-        height: 20
-      spriteId: dea4d8073be72c443b7f519db1229a8b
+        x: 2
+        y: 2
+        width: 28
+        height: 28
+      spriteId: b9d7964a0bef48846a666af23c39f3a7
     linkedCells: []
     parentIndex: -1
   platformSettings: []

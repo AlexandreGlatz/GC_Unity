@@ -8,9 +8,10 @@ using TMPro;
 public class SellShop : MonoBehaviour
 {
     public int money;
-    public List<SeedElements> aniseeds;
     public GameObject unlockText;
     public GameObject enoughText;
+    public GameObject locker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +26,14 @@ public class SellShop : MonoBehaviour
 
     public void SellSeed(SeedElements seed)
     {
-        if (seed.seedAmount >= 1 && !seed.isLocked)
+        if (seed.fruitAmount >= 1 && !seed.isLocked)
         {
+            locker.SetActive(false);
             money += seed.intValue;
-            seed.seedAmount -= 1;
+            seed.fruitAmount -= 1;
             seed.amountSold += 1;
 
-            if (seed.amountSold >=10) 
+            if (seed.amountSold >=2) 
             {
                 seed.intValue -= 1;
                 seed.amountSold =0;
@@ -43,7 +45,7 @@ public class SellShop : MonoBehaviour
             StartCoroutine(ShowLockText());
         }
 
-        else if(seed.seedAmount <= 0)
+        else if(seed.fruitAmount <= 0)
         {
             StartCoroutine(ShowEnoughText());
         }
@@ -53,14 +55,14 @@ public class SellShop : MonoBehaviour
     private IEnumerator ShowLockText()
     {
         unlockText.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         unlockText.SetActive(false);
     }
 
     private IEnumerator ShowEnoughText()
     {
         enoughText.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         enoughText.SetActive(false);
     }
 }
