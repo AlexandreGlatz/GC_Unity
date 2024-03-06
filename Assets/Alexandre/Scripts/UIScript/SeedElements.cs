@@ -21,14 +21,15 @@ public class SeedElements : MonoBehaviour
     public int fruitAmount = 0;
     public int seedAmount = 0;
     public int amountSold = 0;
+    public GameObject locker;
+    public bool firstDown = true;
+    public int lowChance = 33;
+    public int raiseChance = 66;
 
-    private bool firstDown = true;
     private bool firstStay = true;
     private int changeNumber;
     private Sprite selectedSprite;
     private float initScaleX = 0.09f;
-    private int lowChance = 33;
-    private int raiseChance = 66;
     private int stayChance = 100;
 
     // Start is called before the first frame update
