@@ -25,6 +25,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     public SpriteRenderer seedBag;
 
     public GameObject captureHelp;
+    public bool isJump;
     public LoadingScreen loadingScene;
 
 
@@ -39,6 +40,13 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     {
         currency += amout;
         MoneyUI.text = "Money : " + currency;
+    }
+
+    public IEnumerator JumpTime()
+    {
+        isJump = true;
+        yield return new WaitForSeconds((float)0.6);
+        isJump = false;
     }
 
     // Start is called before the first frame update
@@ -93,12 +101,15 @@ public class PlayerMovementBirdLevel : MonoBehaviour
         {
             body.AddForce(new Vector2(0, -1) * powerJump);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        if (isJump == false)
         {
-            body.AddForce(new Vector2(0, 1) * powerJump);
-            canJump = false;
+            if (Input.GetKeyDown(KeyCode.Space) && canJump)
+            {
+                body.AddForce(new Vector2(0, 1) * powerJump);
+                canJump = false;
+                StartCoroutine(JumpTime());
+            }
         }
-
 
         y = body.position.y;
         z = PlayerPrefs.GetFloat("z");
