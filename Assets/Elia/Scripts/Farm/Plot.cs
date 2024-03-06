@@ -10,14 +10,15 @@ public class Plot : MonoBehaviour
     public int plot_number;
     public List<GameObject> Tree_type;
     public float plot_price;
-    public GameObject sign;
+    public List<GameObject> sign;
     public List<GameObject> seeds;
     public GameObject seed_selector;
     public List<GameObject> Choose;
     public int planted;  
     public bool plant_action;
 
-    private List<bool> owned_plot;
+    public List<bool> owned_plot;
+
     private bool first_start = true;
     private List<bool> Unlock_seeds;
 
@@ -35,9 +36,9 @@ public class Plot : MonoBehaviour
 
         if (owned_plot[plot_number-1] == false) 
         {
-            Instantiate(sign);
-            sign.transform.position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
-            sign.name = "Buy_sell"+plot_number;
+            GameObject buying_sign = Instantiate(sign[plot_number-1]);
+            buying_sign.transform.position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
+            buying_sign.name = "Buy_sell"+plot_number;
             // put price on sign
         }
 
@@ -70,8 +71,8 @@ public class Plot : MonoBehaviour
             GameObject Seed_selector = GameObject.Find("Seed_Selector");
             Seed_selector.GetComponent<Choice_pannel>().plot_number = plot_number;
 
-            List<(int x,float y)> position_list = new List<(int x,float y)> { (-1,(float)0.5 ), (1, (float) 0.5 ), (- 1, (float)-1) , (1, (float)-1) };
-            List<(float x,float y)> icon_position = new List<(float x, float y)> { (Seed_select.transform.localScale.x/4, Seed_select.transform.localScale.y/5) };
+            List<(int x,float y)> position_list = new() { (-1, (float)0.5), (1, (float)0.5), (-1, -1), (1, -1) };
+            List<(float x,float y)> icon_position = new () { (Seed_select.transform.localScale.x/4, Seed_select.transform.localScale.y/5) };
 
             for (int count = 0; count < Unlock_seeds.Count; count++)
             {

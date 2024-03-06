@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,7 @@ public class playerwater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if ( !isdead)
         {
             Vector2 currentVelocity = new Vector2(0, body.velocity.y);
@@ -95,29 +97,25 @@ public class playerwater : MonoBehaviour
     public IEnumerator isStunned()
     {
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds((float)0.5);
         speed = 5;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    public void Contactwithfish()
     {
-        if (collision.gameObject.tag == "fish" )
+        fish_stun = GameObject.Find("abyss fish").GetComponent<AnglerFish>().is_stun;
+        if (!fish_stun)
         {
-            fish_stun = GameObject.Find("abyss fish").GetComponent<AnglerFish>().is_stun;
-            if (!fish_stun)
-            {
-                Death();
-            } else
-            {
-                //capture
-            }
+            isdead = true;
+            body.velocity = new Vector3(0, body.velocity.y, 0);
+        }
+        else
+        {
+            //capture
         }
     }
 
-    private void Death()
-    {
-        isdead = true;
-        body.velocity = new Vector3(0,body.velocity.y,0);
-
-    }
+    
 }
