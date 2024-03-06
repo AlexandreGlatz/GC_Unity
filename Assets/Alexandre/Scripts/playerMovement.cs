@@ -103,7 +103,7 @@ public class playerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         mobBehavior.isCaptured = true;
         yield return new WaitForSeconds(0.5f);
-        loadingScene.LoadScene(0); //Goes back to farm
+        loadingScene.LoadScene(1); //Goes back to farm
     }
 
     public void getHit(int mobStrength)
