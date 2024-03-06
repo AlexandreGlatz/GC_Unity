@@ -12,22 +12,20 @@ public class SeedElements : MonoBehaviour
 {
     public TMP_Text value;
     public Image Graph;
-    public Image locker;
     public Image thumbnail;
     public Sprite arrowSprite;
     public Sprite staySprite;
 
     public int intValue;
     public bool isLocked = true;
+    public int fruitAmount = 0;
     public int seedAmount = 0;
     public int amountSold = 0;
-    public bool canChange = true;
 
     private bool firstDown = true;
     private bool firstStay = true;
     private int changeNumber;
     private Sprite selectedSprite;
-    private int wait;
     private float initScaleX = 0.09f;
     private int lowChance = 33;
     private int raiseChance = 66;
