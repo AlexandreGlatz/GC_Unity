@@ -14,19 +14,17 @@ public class PlayerMovement : MonoBehaviour
     public float x;
     public float y;
     public float z;
-    public SpriteRenderer spriteRenderer;
-    public mobBehavior mobBehavior;
+    private SpriteRenderer spriteRenderer;
+    private bool canJump = true;
+    private bool canCapture = false;
+    public SpriteRenderer seedBag;
+
     public GameObject captureHelp;
     public LoadingScreen loadingScene;
-    public SpriteRenderer seedBag;
 
     [Header("Currency")]
     public int currency = 0;
     public TextMeshProUGUI MoneyUI;
-
-
-    private bool canJump = true;
-    private bool canCapture = false;
 
 
     public void IncreaseCurrency(int amout)
@@ -96,7 +94,25 @@ public class PlayerMovement : MonoBehaviour
             transform.position = LoadPosition;
         }
 
+        if (canCapture)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                StartCoroutine(catchMob());
+            }
+        }
 
+    }
+
+    private IEnumerator catchMob()
+    {
+        print("aa");
+        captureHelp.SetActive(false);
+        seedBag.enabled = true;
+        animator.SetTrigger("isCapturing");
+        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
+        loadingScene.LoadScene(0); //Goes back to farm
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -107,5 +123,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(true);
+            canCapture = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "captureZone")
+        {
+            captureHelp.SetActive(false);
+            canCapture = false;
+        }
+    }
+
+
 }
