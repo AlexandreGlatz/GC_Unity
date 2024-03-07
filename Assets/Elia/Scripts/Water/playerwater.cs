@@ -18,7 +18,14 @@ public class playerwater : MonoBehaviour
     public bool isdead;
     public bool fish_stun;
 
-    
+    public bool canCapture;
+    public SpriteRenderer seedBag;
+
+    public GameObject captureHelp;
+
+    public LoadingScreen loadingScene;
+
+
 
 
     // Start is called before the first frame update
@@ -28,12 +35,20 @@ public class playerwater : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();    
         rotate = false;
         isdead = false;
+
+        seedBag.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        body = GetComponent<Rigidbody2D>();
+
+        canCapture = false;
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        fish_stun = GameObject.Find("abyss fish").GetComponent<AnglerFish>().is_stun;
 
         if ( !isdead)
         {
@@ -85,8 +100,45 @@ public class playerwater : MonoBehaviour
         if (body.position.y < yMin) { transform.position = new Vector2(body.position.x, yMin); }
         if (body.position.y > yMax) { transform.position = new Vector2(body.position.x, yMax); }
 
-
+        if (canCapture)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                StartCoroutine(catchMob());
+            }
+        }
     }
+
+
+    private IEnumerator catchMob()
+    {
+
+        captureHelp.SetActive(false);
+        seedBag.enabled = true;
+        //animator.SetTrigger("isCapturing");
+        //yield return new WaitForSeconds(0.2f);   J'ai pas d'anim encore.
+        yield return new WaitForSeconds(0.5f);
+        loadingScene.LoadScene(1); //Goes back to farm
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fish" && fish_stun)
+        {
+            captureHelp.SetActive(true);
+            canCapture = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fish")
+        {
+            captureHelp.SetActive(false);
+            canCapture = false;
+        }
+    }
+
 
     public void Damage()
     {
@@ -105,7 +157,7 @@ public class playerwater : MonoBehaviour
 
     public void Contactwithfish()
     {
-        fish_stun = GameObject.Find("abyss fish").GetComponent<AnglerFish>().is_stun;
+        
         if (!fish_stun)
         {
             isdead = true;

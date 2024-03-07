@@ -73,26 +73,30 @@ public class Spawn : MonoBehaviour
             {
                 SpawnItem();
                 startpos += distance;
+                maxspawn -= 1;
             }
-            if (maxspawn == 0)
-            {
-                Instantiate(rock);
-                rock.transform.position = new Vector3(follow.transform.position.x + halflength * 4, screen_bottom[1], 0);
+
+        }
+
+
+        if (!Ghostdestroy)
+        { 
+            if (GameObject.FindWithTag("Jelly_fish")){
+                Ghost_fish(GameObject.FindWithTag("Jelly_fish"));
             }
         }
 
 
-        if (!Ghostdestroy && Kelp_counter <= 1)
-        {
-            GameObject jelly = GameObject.FindWithTag("Jelly_fish");
-            if (jelly.name != "Jelly_fish " + Kelp_counter + "(Clone)")
+    }
+
+    void Ghost_fish(GameObject jelly)
+    {
+
+            if (jelly.name != "Jelly_fish 1(Clone)")
             {
                 Destroy(jelly);
                 Ghostdestroy = true;
-            }
-
-        }
-
+            }  else { Ghostdestroy = true; }      
     }
 
     void SpawnItem()
@@ -121,7 +125,7 @@ public class Spawn : MonoBehaviour
 
         }
 
-        maxspawn -= 1;
+        
         }
     }
 
