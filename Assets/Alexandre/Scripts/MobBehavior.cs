@@ -14,6 +14,7 @@ public class mobBehavior : MonoBehaviour
     public Life life;
     public MobLife mobLife;
     public Animator parentAnim;
+    public ParticleSystem system;
 
     public int boarHp = 3;
     public int boarDamage = 1;
@@ -88,12 +89,14 @@ public class mobBehavior : MonoBehaviour
             {
                 wallImpact = 1;
             }
-            if (walkDir)
+            else if (walkDir)
             {
+                system.Play();
                 boarBody.AddForce(new Vector2(-1, 1) * wallImpact);
             }
             else
             {
+                system.Play();
                 boarBody.AddForce(new Vector2(1, 1) * wallImpact);
             }
             
