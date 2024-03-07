@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D body;
     public Animator animator;
     public float powerJump;
+    public bool isWalking;
 
     public float x;
     public float y;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject captureHelp;
     public LoadingScreen loadingScene;
+    AudioSource walksound;
 
     [Header("Currency")]
     public int currency = 0;
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         {
             instance = this;
         }
+        walksound = GetComponent<AudioSource>();
 
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -53,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isWalking = false;
         Vector2 currentVelocity = new Vector2(0, body.velocity.y);
         bool isRunning = false;
         spriteRenderer.flipX = false;
@@ -61,14 +65,21 @@ public class PlayerMovement : MonoBehaviour
         {
             currentVelocity += new Vector2(5, 0);
             isRunning = true;
+            walksound.Play();
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.Q))
         {
             currentVelocity += new Vector2(-5, 0);
             isRunning = true;
             spriteRenderer.flipX = true;
+            walksound.Play();
+            isWalking = true;
         }
-
+        if (isWalking == false)
+        {
+            walksound.Stop();
+        }
         animator.SetBool("isRunning", isRunning);
 
         body.velocity = currentVelocity;
@@ -101,6 +112,8 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(catchMob());
             }
         }
+
+        
 
     }
 
