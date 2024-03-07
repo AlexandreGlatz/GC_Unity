@@ -39,6 +39,9 @@ public class AnglerFish : MonoBehaviour
             stunned = true; 
             gameObject.transform.GetChild(0).GetComponent<Light2D>().enabled = false;
             body.velocity = Vector2.zero;
+            BoxCollider2D Boxcollider = gameObject.GetComponent<BoxCollider2D>();
+            Boxcollider.size = new Vector2((float)4.4, Boxcollider.size.y); 
+            Boxcollider.offset = new Vector2(0, Boxcollider.offset.y);
 
             GameObject Barrer = Instantiate(rock);
             Barrer.transform.position = new Vector3(this.gameObject.transform.position.x + 15, -5, 0);

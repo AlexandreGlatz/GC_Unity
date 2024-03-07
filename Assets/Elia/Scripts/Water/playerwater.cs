@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class playerwater : MonoBehaviour
 {
-
     public Animator animator;
     public GameObject Fish;
     public Rigidbody2D body;
@@ -122,6 +121,7 @@ public class playerwater : MonoBehaviour
 
     private IEnumerator catchMob()
     {
+
 
         captureHelp.SetActive(false);
         seedBag.enabled = true;
