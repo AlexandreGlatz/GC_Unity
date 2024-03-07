@@ -226,9 +226,9 @@ MonoBehaviour:
   - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: -2253911629886400664, guid: 7aae6725ebc73e940be32b8fb8ea7915, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -241,6 +241,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &847738875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -514,12 +516,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 8
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 6810011213143095572, guid: e91a4c07e3a2c1749b4faaed7acc9968, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -532,6 +534,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &1031862368
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -670,9 +674,9 @@ MonoBehaviour:
   - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 0}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -685,6 +689,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &1114583062
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -820,12 +826,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 6
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 6810011213143095572, guid: eba98e53b3edee0449baa7a95cb3ff16, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -838,6 +844,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &1168357088
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1041,10 +1049,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 3
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
   sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
   seeds:
@@ -1059,6 +1067,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &1841976717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1194,12 +1204,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 4
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 6810011213143095572, guid: b8b8cee260a6f8b409749dfd81480f2a, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -1212,6 +1222,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &2009468788
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1347,12 +1359,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 7
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 6810011213143095572, guid: c3868f640614d8a438788c92d27c3033, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -1365,6 +1377,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &2063255040
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1661,12 +1675,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_number: 5
   Tree_type:
-  - {fileID: 4800358197790278444, guid: 63ae44783445ec94c9f322e63d89555d, type: 3}
+  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
   - {fileID: 4800358197790278444, guid: d8f1fc91186083b4e977c8d3a86b3aa7, type: 3}
   - {fileID: 4800358197790278444, guid: 7b586a5c8b2d90040ba84080092bf8dc, type: 3}
-  - {fileID: 4800358197790278444, guid: 51409a32a610bf54ab7f36b297db8af6, type: 3}
+  - {fileID: 4800358197790278444, guid: b78fe92713ddd0647b81630b6a1dda86, type: 3}
   plot_price: 0
-  sign: {fileID: 6810011213143095572, guid: 92bcd00a134d5b64e9536fe1394f2e75, type: 3}
+  sign: {fileID: 6810011213143095572, guid: 27c6f506c94033f418ae0e07ede7308a, type: 3}
   seeds:
   - {fileID: 1918894168175323961, guid: e2b1e0722e8c0a0448c8be5ae4fe4037, type: 3}
   - {fileID: 1918894168175323961, guid: d8eb8cf4fc1e7b843b6d9ca551efccaf, type: 3}
@@ -1679,6 +1693,8 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
+  owned_plot: 
+  buy_plot: 0
 --- !u!58 &2130175668
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddb6011e20b82354b8c7b3ec60365f29
+guid: 3b4ad4f21f410b94785b976603fb2458
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: fish tree 1
+  - name: fish tree 4
     originalName: 
-    pivot: {x: 0.43137255, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 51
-      height: 38
-    spriteID: 0a33915c2aa732243800746cbba9ecca
+      width: 64
+      height: 63
+    spriteID: f4eb4a634b803d84487583610d2d6f7c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: fish tree 1_Frame_1
+  - name: fish tree 4_Frame_1
     originalName: 
-    pivot: {x: 0.43137255, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 50
-      width: 51
-      height: 38
-    spriteID: 1c4302808e3634346b62fb30c56839fd
+      y: 75
+      width: 64
+      height: 63
+    spriteID: e877cf4a525fb5243a8adc15841574bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,32 +160,32 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 50}
+    uvTransform: {x: 4, y: 75}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1435768659
-    name: fish tree 1
+    guid: 1435767468
+    name: fish tree 4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: fish tree 1_Frame_0
+    - name: fish tree 4_Frame_0
       frameIndex: 0
       cellRect:
-        x: 10
+        x: 0
         y: 0
-        width: 51
-        height: 38
-      spriteId: 0a33915c2aa732243800746cbba9ecca
-    - name: fish tree 1_Frame_1
+        width: 64
+        height: 63
+      spriteId: f4eb4a634b803d84487583610d2d6f7c
+    - name: fish tree 4_Frame_1
       frameIndex: 1
       cellRect:
-        x: 10
+        x: 0
         y: 0
-        width: 51
-        height: 38
-      spriteId: 1c4302808e3634346b62fb30c56839fd
+        width: 64
+        height: 63
+      spriteId: e877cf4a525fb5243a8adc15841574bc
     linkedCells: []
     parentIndex: -1
   platformSettings: []

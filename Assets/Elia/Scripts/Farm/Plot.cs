@@ -10,7 +10,7 @@ public class Plot : MonoBehaviour
     public int plot_number;
     public List<GameObject> Tree_type;
     public float plot_price;
-    public List<GameObject> sign;
+    public GameObject sign;
     public List<GameObject> seeds;
     public GameObject seed_selector;
     public List<GameObject> Choose;
@@ -18,6 +18,7 @@ public class Plot : MonoBehaviour
     public bool plant_action;
 
     public List<bool> owned_plot;
+    public bool buy_plot;
 
     private bool first_start = true;
     private List<bool> Unlock_seeds;
@@ -36,10 +37,10 @@ public class Plot : MonoBehaviour
 
         if (owned_plot[plot_number-1] == false) 
         {
-            GameObject buying_sign = Instantiate(sign[plot_number-1]);
+            GameObject buying_sign = Instantiate(sign);
             buying_sign.transform.position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
             buying_sign.name = "Buy_sell"+plot_number;
-            // put price on sign
+            buying_sign.transform.SetParent(gameObject.transform);
         }
 
     }
@@ -47,6 +48,7 @@ public class Plot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (plant_action == true)
         {
             PlantATree(planted);
