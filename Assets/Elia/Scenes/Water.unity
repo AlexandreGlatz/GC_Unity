@@ -1576,7 +1576,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 13f7fc99f6aa1314b80df5561124d159, type: 3}
+  m_Sprite: {fileID: 6349965506040861355, guid: 7a97ff13e7b4b4f48ba95dd9265a83bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1615,6 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72924e39acf1a343b84a191b5b47490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCaptured: 0
   rock: {fileID: 4212056152460472751, guid: d3757bd64baa2fa4d8856d177df49f76, type: 3}
   speed: 5
   body: {fileID: 934803311}
@@ -1682,7 +1683,7 @@ BoxCollider2D:
   m_Offset: {x: -0.4449244, y: 1.6556854}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.51363635, y: -0.074193545}
     oldSize: {x: 4.4, y: 3.1}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
@@ -2032,6 +2033,7 @@ GameObject:
   - component: {fileID: 1100883815}
   - component: {fileID: 1100883814}
   - component: {fileID: 1100883819}
+  - component: {fileID: 1100883820}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -2192,17 +2194,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab47236345e92944a817c63bf47cb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1100883820}
+  Fish: {fileID: 934803307}
   body: {fileID: 1100883815}
   speed: 5
   powerjump: 75
   gravity: 20
   isdead: 0
   fish_stun: 0
+  lighton: 0
   canCapture: 0
   seedBag: {fileID: 3626916397498700004, guid: 076dccece56c9c64f8a4144734c94a8c, type: 3}
   captureHelp: {fileID: 2109066536}
   loadingScene: {fileID: 1870411746}
+--- !u!95 &1100883820
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100883813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e82faeb6a6dde7240be87b1ff31dbbfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1187137516
 GameObject:
   m_ObjectHideFlags: 0

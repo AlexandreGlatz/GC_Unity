@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: abyss fish damage_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.006451613}
+    pivot: {x: 0.51363635, y: -0.074193545}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -193,8 +193,8 @@ ScriptedImporter:
     - name: abyss fish damage_Frame_0
       frameIndex: 0
       cellRect:
-        x: 5
-        y: 2
+        x: -1
+        y: 23
         width: 440
         height: 310
       spriteId: 3f516a7a54eea564e93e1b1faaf9afc4

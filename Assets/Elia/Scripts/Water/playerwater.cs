@@ -7,7 +7,7 @@ public class playerwater : MonoBehaviour
 {
 
     public Animator animator;
-
+    public GameObject Fish;
     public Rigidbody2D body;
     public float speed;
     public float powerjump;
@@ -17,6 +17,8 @@ public class playerwater : MonoBehaviour
     private bool rotate;
     public bool isdead;
     public bool fish_stun;
+    public bool lighton;
+
 
     public bool canCapture;
     public SpriteRenderer seedBag;
@@ -41,7 +43,7 @@ public class playerwater : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
 
         canCapture = false;
-
+        lighton = true;
     }
 
 
@@ -49,6 +51,12 @@ public class playerwater : MonoBehaviour
     void Update()
     {
         fish_stun = GameObject.Find("abyss fish").GetComponent<AnglerFish>().is_stun;
+
+
+        if (!lighton)
+        {
+            loadingScene.LoadScene(1); //Goes back to farm
+        }
 
         if ( !isdead)
         {
@@ -107,6 +115,8 @@ public class playerwater : MonoBehaviour
                 StartCoroutine(catchMob());
             }
         }
+
+
     }
 
 
@@ -115,8 +125,9 @@ public class playerwater : MonoBehaviour
 
         captureHelp.SetActive(false);
         seedBag.enabled = true;
-        //animator.SetTrigger("isCapturing");
-        //yield return new WaitForSeconds(0.2f);   J'ai pas d'anim encore.
+        animator.SetTrigger("isCapturing");
+        Fish.GetComponent<AnglerFish>().isCaptured = true;
+        yield return new WaitForSeconds(0.2f);
         yield return new WaitForSeconds(0.5f);
         loadingScene.LoadScene(1); //Goes back to farm
     }
@@ -163,10 +174,7 @@ public class playerwater : MonoBehaviour
             isdead = true;
             body.velocity = new Vector3(0, body.velocity.y, 0);
         }
-        else
-        {
-            //capture
-        }
+
     }
 
     

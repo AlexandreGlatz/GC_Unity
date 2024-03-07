@@ -23,5 +23,10 @@ public class Light_Player : MonoBehaviour
             gameObject.GetComponent<Light2D>().intensity -= (float)0.001; 
 
         }
+
+        if (GameObject.Find("Head_light (1)").GetComponent<Light2D>().intensity <= 0)
+        {
+            GameObject.Find("player").GetComponent<playerwater>().lighton = false;
+        }
     }
 }

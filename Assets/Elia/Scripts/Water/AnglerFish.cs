@@ -5,19 +5,20 @@ using UnityEngine.Rendering.Universal;
 
 public class AnglerFish : MonoBehaviour
 {
+
+    public bool isCaptured;
     public GameObject rock;
     public float speed;
     public Rigidbody2D body;
     private int hp;
     public bool is_stun;
-    private float timestart;
+
     private bool isinvincible;
     public Animator animator;
     private bool stunned;
     // Start is called before the first frame update
     void Start()
     {
-        timestart = (float)1.5;
         hp = 10;
         is_stun = false;
         stunned = false;
@@ -41,6 +42,11 @@ public class AnglerFish : MonoBehaviour
 
             GameObject Barrer = Instantiate(rock);
             Barrer.transform.position = new Vector3(this.gameObject.transform.position.x + 15, -5, 0);
+        }
+
+        if (isCaptured)
+        {
+            animator.SetTrigger("IsCaptured");
         }
 
     }
