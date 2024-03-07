@@ -15,6 +15,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     public Rigidbody2D body;
     public Animator animator;
     public float powerJump;
+    AudioSource jumpsound;
 
     public float x;
     public float y;
@@ -62,6 +63,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
             instance = this;
         }
         camera = Camera.main;
+        jumpsound = GetComponent<AudioSource>();
 
 
         seedBag.enabled = false;
@@ -108,6 +110,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
                 body.AddForce(new Vector2(0, 1) * powerJump);
                 canJump = false;
                 StartCoroutine(JumpTime());
+                jumpsound.Play();
             }
         }
 
@@ -154,6 +157,8 @@ public class PlayerMovementBirdLevel : MonoBehaviour
             }
         }
 
+        
+
     }
 
     private IEnumerator catchMob()
@@ -164,7 +169,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
         animator.SetTrigger("isCapturing");
         yield return new WaitForSeconds(0.2f);
         yield return new WaitForSeconds(0.5f);
-        loadingScene.LoadScene(0); //Goes back to farm
+        loadingScene.LoadScene(1); //Goes back to farm
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

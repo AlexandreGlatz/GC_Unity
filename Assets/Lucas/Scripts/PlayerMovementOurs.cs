@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("isCapturing");
         yield return new WaitForSeconds(0.2f);
         yield return new WaitForSeconds(0.5f);
-        loadingScene.LoadScene(0); //Goes back to farm
+        loadingScene.LoadScene(1); //Goes back to farm
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
