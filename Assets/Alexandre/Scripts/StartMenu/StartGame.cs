@@ -7,7 +7,7 @@ public class StartGame : MonoBehaviour
     public LoadingScreen loadingScreen;
     public void GameStart()
     {
-        loadingScreen.LoadScene(0);
+        loadingScreen.LoadScene(1);
     }
 
     public void GameQuit()

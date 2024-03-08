@@ -5,7 +5,6 @@ using UnityEngine;
 public class MenuWalk : MonoBehaviour
 {
     public GameObject character;
-    private int change = 1;
     // Start is called before the first frame update
     void Start()
     {
