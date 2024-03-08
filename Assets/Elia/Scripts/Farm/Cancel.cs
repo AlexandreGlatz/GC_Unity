@@ -17,6 +17,6 @@ public class Cancel : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(this.gameObject.transform.parent.gameObject);
+        gameObject.transform.parent.GetComponent<Choice_pannel>().Destroypannel();
     }
 }

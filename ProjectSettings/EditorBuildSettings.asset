@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Alexandre/Scenes/AlexUI.unity
     guid: c758bcd666f7cfc41a1d6452d80284e3
+  - enabled: 1
+    path: Assets/Elia/Scenes/Water.unity
+    guid: 9221a0f690d96c046ac77b3a2192ad06
   m_configObjects: {}

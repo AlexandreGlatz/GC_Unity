@@ -17,6 +17,7 @@ public class Trees : MonoBehaviour
     GameObject Parent;
     bool new_state;
     float tree_time_upgrade;
+    public string tree_type;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,8 @@ public class Trees : MonoBehaviour
         if (Harvestable)
         {
             Parent.GetComponent<Plot>().planted = -1;
-            
+            GameObject.Find(tree_type).GetComponent<SeedElements>().seedAmount += 1;
+            GameObject.Find(tree_type).GetComponent<SeedElements>().fruitAmount += 4;
             Destroy(this.gameObject);  
         }
     }

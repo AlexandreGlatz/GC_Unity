@@ -7,6 +7,9 @@ public class Confirm : MonoBehaviour
     private GameObject Parent;
     private int Plot_number;
     List<bool> choosen_seed;
+    bool on_click;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,16 @@ public class Confirm : MonoBehaviour
 
     private void OnMouseDown()
     {
-        choosen_seed = Parent.GetComponent<Choice_pannel>().choosen_seed;
-        GameObject Plot = GameObject.Find("Plot " + Plot_number);
-        
-        Plot.GetComponent<Plot>().planted =choosen_seed.IndexOf(true);
-        Plot.GetComponent<Plot>().plant_action = true;
+        on_click = GameObject.Find("Seed_Selector").GetComponent<Choice_pannel>().icon_clicked;
+        if (on_click)
+        {
+            choosen_seed = Parent.GetComponent<Choice_pannel>().choosen_seed;
+            GameObject Plot = GameObject.Find("Plot " + Plot_number);
+            GameObject.Find("Seed_Selector").GetComponent<Choice_pannel>().Destroypannel();
 
-        Destroy(GameObject.Find("Seed_Selector"));
+            Plot.GetComponent<Plot>().planted = choosen_seed.IndexOf(true);
+            Plot.GetComponent<Plot>().plant_action = true;
+
+        }
     }
 }

@@ -9,18 +9,22 @@ public class Plot : MonoBehaviour
 {
     public int plot_number;
     public List<GameObject> Tree_type;
+    public List<string> Tree_names;
     public float plot_price;
-    public List<GameObject> sign;
+    public GameObject sign;
     public List<GameObject> seeds;
     public GameObject seed_selector;
     public List<GameObject> Choose;
     public int planted;  
     public bool plant_action;
+    public GameObject enoughText;
+    public GameObject aniseeds;
 
     public List<bool> owned_plot;
+    public bool buy_plot;
 
     private bool first_start = true;
-    private List<bool> Unlock_seeds;
+    private List<bool> locked_seeds;
 
     // Start is called before the first frame update
     void Start()
@@ -30,16 +34,16 @@ public class Plot : MonoBehaviour
         {
             planted = -1;
             owned_plot = new List<bool> { true, true, false, false, false, false, false, false };
-            Unlock_seeds = new List<bool> { true,true,true,true }; 
+            
 
         }
 
         if (owned_plot[plot_number-1] == false) 
         {
-            GameObject buying_sign = Instantiate(sign[plot_number-1]);
+            GameObject buying_sign = Instantiate(sign);
             buying_sign.transform.position = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
             buying_sign.name = "Buy_sell"+plot_number;
-            // put price on sign
+            buying_sign.transform.SetParent(gameObject.transform);
         }
 
     }
@@ -47,12 +51,14 @@ public class Plot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (plant_action == true)
         {
             PlantATree(planted);
             plant_action = false;   
 
         }
+
     }
 
     private void FixedUpdate()
@@ -62,6 +68,12 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown()
     {
+        bool boardlock = aniseeds.transform.GetChild(0).GetComponent<SeedElements>().isLocked;
+        bool bearlock = aniseeds.transform.GetChild(1).GetComponent<SeedElements>().isLocked;
+        bool birdlock = aniseeds.transform.GetChild(2).GetComponent<SeedElements>().isLocked;
+        bool fishlock = aniseeds.transform.GetChild(3).GetComponent<SeedElements>().isLocked;
+        locked_seeds = new List<bool> { bearlock, birdlock, boardlock, fishlock };
+
         if (owned_plot[plot_number - 1] && planted == -1)
         {
             Destroy(GameObject.FindWithTag("Seed_selector"));
@@ -74,10 +86,10 @@ public class Plot : MonoBehaviour
             List<(int x,float y)> position_list = new() { (-1, (float)0.5), (1, (float)0.5), (-1, -1), (1, -1) };
             List<(float x,float y)> icon_position = new () { (Seed_select.transform.localScale.x/4, Seed_select.transform.localScale.y/5) };
 
-            for (int count = 0; count < Unlock_seeds.Count; count++)
+            for (int count = 0; count < locked_seeds.Count; count++)
             {
 
-                if (Unlock_seeds[count])
+                if (!locked_seeds[count])
                 {
                     GameObject seed = Instantiate(seeds[count]);
                     seed.transform.SetParent(Seed_select.transform);
@@ -111,10 +123,22 @@ public class Plot : MonoBehaviour
 
     void PlantATree(int tree_type)
     {
-        GameObject Tree =Instantiate(Tree_type[tree_type]);
-        Tree.transform.SetParent(GameObject.Find("Plot " + plot_number).transform);
-        Tree.transform.position = gameObject.transform.position;
-        Tree.transform.localScale = new Vector2(4,4);
+        if (GameObject.Find(Tree_names[tree_type]).GetComponent<SeedElements>().seedAmount > 0)
+        {
+           
+            GameObject Tree = Instantiate(Tree_type[tree_type]);
+            GameObject.Find(Tree_names[tree_type]).GetComponent<SeedElements>().seedAmount -= 1;
+            Tree.transform.SetParent(GameObject.Find("Plot " + plot_number).transform);
+            Tree.transform.position = gameObject.transform.position;
+            Tree.transform.localScale = new Vector2(4, 4);
+        } else { StartCoroutine(NotEnough()); }
+    }
+
+    public IEnumerator NotEnough()
+    {
+        enoughText.SetActive(true);
+        yield return new WaitForSeconds(3);
+        enoughText.SetActive(false);
     }
 
 }

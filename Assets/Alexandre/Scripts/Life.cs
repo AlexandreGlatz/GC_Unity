@@ -9,6 +9,7 @@ public class Life : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Collider2D boarBody;
     public Collider2D playerBody;
+    public LoadingScreen loadingScreen;
 
 
     // Start is called before the first frame update
@@ -56,7 +57,7 @@ public class Life : MonoBehaviour
     }
     public void Death()
     {
-        Destroy(gameObject);
+        loadingScreen.LoadScene(1);
     }
 
     public IEnumerator Invincibility()
