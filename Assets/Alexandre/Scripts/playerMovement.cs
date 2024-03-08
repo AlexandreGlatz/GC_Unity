@@ -30,6 +30,7 @@ public class playerMovement : MonoBehaviour
     {
         seedBag.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Destroy(GameObject.Find("PlayerUI"));
     }
 
     // Update is called once per frame
