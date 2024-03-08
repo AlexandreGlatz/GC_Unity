@@ -497,9 +497,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &847738875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -839,9 +839,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &1031862368
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1145,9 +1145,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &1114583062
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1311,9 +1311,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &1168357088
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2068,9 +2068,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &1841976717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2357,9 +2357,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &2009468788
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2518,9 +2518,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &2063255040
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2800,9 +2800,9 @@ MonoBehaviour:
   - {fileID: 8195291245355680410, guid: 2a302776219149446b0c38555c12b3d3, type: 3}
   planted: 0
   plant_action: 0
-  enoughText: {fileID: 1137769313}
   buy_plot: 0
   owned_plot: 
+  enoughText: {fileID: 1137769313}
 --- !u!58 &2130175668
 CircleCollider2D:
   m_ObjectHideFlags: 0

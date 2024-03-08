@@ -16,7 +16,7 @@ public class Plot : MonoBehaviour
     public List<GameObject> Choose;
     public int planted;  
     public bool plant_action;
-    public GameObject enoughText;
+
     private GameObject aniseeds;
 
     public bool buy_plot;
@@ -24,6 +24,8 @@ public class Plot : MonoBehaviour
 
     private bool first_start = true;
     private List<bool> locked_seeds;
+
+    public GameObject enoughText;
 
     // Start is called before the first frame update
     void Start()
@@ -123,13 +125,17 @@ public class Plot : MonoBehaviour
     {
         if (GameObject.Find(Tree_names[tree_type]).GetComponent<SeedElements>().seedAmount > 0)
         {
-           
+
             GameObject Tree = Instantiate(Tree_type[tree_type]);
             GameObject.Find(Tree_names[tree_type]).GetComponent<SeedElements>().seedAmount -= 1;
             Tree.transform.SetParent(GameObject.Find("Plot " + plot_number).transform);
             Tree.transform.position = gameObject.transform.position;
             Tree.transform.localScale = new Vector2(4, 4);
-        } else { StartCoroutine(NotEnough()); }
+        } else {
+            gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            planted = -1;
+            StartCoroutine(NotEnough());
+        }
     }
 
     public IEnumerator NotEnough()
