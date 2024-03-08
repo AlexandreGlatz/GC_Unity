@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class LoadingScreen : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class LoadingScreen : MonoBehaviour
     public Image LoadingBarFill;
 
     public void LoadScene(int sceneId)
-    {
+    {      
+
         StartCoroutine(LoadSceneAsync(sceneId));
     }
 

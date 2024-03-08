@@ -43,6 +43,9 @@ public class playerwater : MonoBehaviour
 
         canCapture = false;
         lighton = true;
+
+
+        Destroy(GameObject.Find("PlayerUI"));
     }
 
 
@@ -122,7 +125,8 @@ public class playerwater : MonoBehaviour
     private IEnumerator catchMob()
     {
 
-
+        GameObject.Find("fish").GetComponent<SeedElements>().isLocked = false;
+        GameObject.Find("fish").GetComponent<SeedElements>().seedAmount += 1;
         captureHelp.SetActive(false);
         seedBag.enabled = true;
         animator.SetTrigger("isCapturing");
