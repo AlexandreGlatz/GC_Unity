@@ -141,6 +141,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: fish tree 1_Frame_1
+    originalName: 
+    pivot: {x: 0.43137255, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 51
+      height: 38
+    spriteID: 1c4302808e3634346b62fb30c56839fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,7 +170,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: fish tree 1
+    - name: fish tree 1_Frame_0
       frameIndex: 0
       cellRect:
         x: 10
@@ -158,6 +178,14 @@ ScriptedImporter:
         width: 51
         height: 38
       spriteId: 0a33915c2aa732243800746cbba9ecca
+    - name: fish tree 1_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 0
+        width: 51
+        height: 38
+      spriteId: 1c4302808e3634346b62fb30c56839fd
     linkedCells: []
     parentIndex: -1
   platformSettings: []

@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tree_state: 0
   animator: {fileID: 1974154570241956113}
+  tree_type: bear
 --- !u!95 &1974154570241956113
 Animator:
   serializedVersion: 5
