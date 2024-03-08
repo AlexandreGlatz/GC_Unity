@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class Plot : MonoBehaviour

@@ -31,7 +31,6 @@ public class SeedElements : MonoBehaviour
     private int changeNumber;
     private Sprite selectedSprite;
     private float initScaleX = 0.09f;
-    private int stayChance = 80;
 
     // Start is called before the first frame update
     void Start()
