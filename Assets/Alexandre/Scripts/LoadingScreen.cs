@@ -25,7 +25,7 @@ public class LoadingScreen : MonoBehaviour
         while (!operation.isDone) 
         {
             float progressValue = Mathf.Clamp01(operation.progress / .9f);
-            print(progressValue);
+
             LoadingBarFill.fillAmount = progressValue;
 
             yield return null;

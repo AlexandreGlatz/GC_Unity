@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("PlayerUI").GetComponent<Canvas>().enabled = false;
 
         if (instance != null)
         {
@@ -107,8 +108,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (canCapture)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                GameObject.Find("bear").GetComponent<SeedElements>().isLocked = false;
+                GameObject.Find("bear").GetComponent<SeedElements>().seedAmount += 1;
                 StartCoroutine(catchMob());
             }
         }
@@ -119,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator catchMob()
     {
-        print("aa");
+
         captureHelp.SetActive(false);
         seedBag.enabled = true;
         animator.SetTrigger("isCapturing");

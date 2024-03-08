@@ -27,7 +27,7 @@ public class Buy_Plot : MonoBehaviour
     private void OnMouseDown()
     {
         money = GameObject.Find("Shop").GetComponent<SellShop>().money;
-        owned_plot = Parent.GetComponent<Plot>().owned_plot;
+        owned_plot = GameObject.Find("Sign").GetComponent<OwnedPlot>().owned_plot;
         if (money >= sign_price)
         {
             owned_plot[sign_number] = true;

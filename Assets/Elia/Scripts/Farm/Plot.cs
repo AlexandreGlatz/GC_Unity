@@ -18,10 +18,10 @@ public class Plot : MonoBehaviour
     public int planted;  
     public bool plant_action;
     public GameObject enoughText;
-    public GameObject aniseeds;
+    private GameObject aniseeds;
 
-    public List<bool> owned_plot;
     public bool buy_plot;
+    public List<bool> owned_plot;
 
     private bool first_start = true;
     private List<bool> locked_seeds;
@@ -29,13 +29,11 @@ public class Plot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        owned_plot = GameObject.Find("Sign").GetComponent<OwnedPlot>().owned_plot;
+        aniseeds = GameObject.Find("Aniseeds");
         if (first_start)
         {
             planted = -1;
-            owned_plot = new List<bool> { true, true, false, false, false, false, false, false };
-            
-
         }
 
         if (owned_plot[plot_number-1] == false) 
@@ -46,6 +44,7 @@ public class Plot : MonoBehaviour
             buying_sign.transform.SetParent(gameObject.transform);
         }
 
+        GameObject.Find("PlayerUI").GetComponent<Canvas>().enabled = true;
     }
     
     // Update is called once per frame

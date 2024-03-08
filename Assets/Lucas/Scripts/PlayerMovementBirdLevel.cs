@@ -53,6 +53,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("PlayerUI").GetComponent<Canvas>().enabled = false;
 
         if (instance != null)
         {
@@ -151,8 +152,10 @@ public class PlayerMovementBirdLevel : MonoBehaviour
 
         if (canCapture)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                GameObject.Find("bird").GetComponent<SeedElements>().isLocked = false;
+                GameObject.Find("bird").GetComponent<SeedElements>().seedAmount += 1;
                 StartCoroutine(catchMob());
             }
         }
@@ -163,7 +166,7 @@ public class PlayerMovementBirdLevel : MonoBehaviour
 
     private IEnumerator catchMob()
     {
-        print("aa");
+
         captureHelp.SetActive(false);
         seedBag.enabled = true;
         animator.SetTrigger("isCapturing");

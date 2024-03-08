@@ -63,5 +63,6 @@ public class Choice_pannel : MonoBehaviour
     {
         GameObject.Find("Plot " + plot_number).GetComponent<CircleCollider2D>().enabled = true;
         Destroy(gameObject);
+        
     }
 }

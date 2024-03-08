@@ -30,7 +30,7 @@ public class playerMovement : MonoBehaviour
     {
         seedBag.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Destroy(GameObject.Find("PlayerUI"));
+        GameObject.Find("PlayerUI").GetComponent<Canvas>().enabled = false;
     }
 
     // Update is called once per frame
@@ -78,16 +78,23 @@ public class playerMovement : MonoBehaviour
 
         if (canCapture)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                GameObject.Find("boarseed").GetComponent<SeedElements>().isLocked = false;
+                GameObject.Find("boarseed").GetComponent<SeedElements>().seedAmount += 1;
+
                 StartCoroutine(catchMob());
             }
         }
+
 
     }
 
     private IEnumerator catchMob()
     {
+
+
+
         captureHelp.SetActive(false);
         seedBag.enabled = true;
         if (mobBehavior.walkDir)

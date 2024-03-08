@@ -167,4 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tree_state: 0
   animator: {fileID: -2676269342935184651}
-  tree_type: boar
+  tree_type: boarseed
