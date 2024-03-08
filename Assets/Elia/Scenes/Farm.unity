@@ -498,8 +498,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &847738875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -840,8 +840,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &1031862368
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &1114583062
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1312,8 +1312,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &1168357088
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2007,8 +2007,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &1841976717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2168,8 +2168,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &2009468788
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2329,8 +2329,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &2063255040
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2611,8 +2611,8 @@ MonoBehaviour:
   planted: 0
   plant_action: 0
   enoughText: {fileID: 1137769313}
-  owned_plot: 
   buy_plot: 0
+  owned_plot: 
 --- !u!58 &2130175668
 CircleCollider2D:
   m_ObjectHideFlags: 0
