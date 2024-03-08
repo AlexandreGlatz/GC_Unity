@@ -8,6 +8,7 @@ public class Choice_pannel : MonoBehaviour
     public List<bool> choosen_seed;
     private List<GameObject> all_childs;
     private Choice_icon choice_icon_script;
+    public bool icon_clicked;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,8 @@ public class Choice_pannel : MonoBehaviour
             all_childs.Add(child);
         }
         choosen_seed = new List<bool> { false,false,false,false};
-
+        GameObject.Find("Plot "+plot_number).GetComponent<CircleCollider2D>().enabled = false;
+        icon_clicked = false;
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class Choice_pannel : MonoBehaviour
             if (choice_icon_script.on_click == true)
             {
                 choice_icon_script.on_click = false;
+                icon_clicked = true;
                 reset_icon = true;
                 clicked = count;
                 count = 0;
@@ -53,5 +56,12 @@ public class Choice_pannel : MonoBehaviour
             choosen_seed = new List<bool> { false, false, false, false };
             choosen_seed[clicked] = true;
         }
+
+    }
+
+    public void Destroypannel()
+    {
+        GameObject.Find("Plot " + plot_number).GetComponent<CircleCollider2D>().enabled = true;
+        Destroy(gameObject);
     }
 }
