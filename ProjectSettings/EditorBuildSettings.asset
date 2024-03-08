@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Alexandre/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Alexandre/Scenes/MainMenu.unity
+    guid: 25da5f909a2bd604ab79c4ebb98338a2
+  - enabled: 1
+    path: Assets/Elia/Scenes/Farm.unity
+    guid: 63542282640e0ee448b1b6960019949b
+  - enabled: 1
+    path: Assets/Alexandre/Scenes/SceneAlex.unity
+    guid: 40ec5081ee2200b4595e6f8bc6c7a30b
+  - enabled: 1
+    path: Assets/Lucas/Scenes/OURS.unity
+    guid: d22d2ab39ab682e45ae714362e568755
+  - enabled: 1
+    path: Assets/Lucas/Scenes/Bird.unity
+    guid: 3cb63f6c427c444438f5afeff57b17a7
+  - enabled: 1
+    path: Assets/Elia/Scenes/Water.unity
+    guid: 9221a0f690d96c046ac77b3a2192ad06
   m_configObjects: {}

@@ -5,7 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - abyss_fish
+  - boar
+  - wall
+  - player
+  - lowCam
+  - captureZone
+  - Seed_selector
+  - Unknown
+  - fish
+  - Jelly_fish
+  - fishinfo
   layers:
   - Default
   - TransparentFX
